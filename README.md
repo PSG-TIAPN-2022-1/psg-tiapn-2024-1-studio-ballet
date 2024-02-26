@@ -1,17 +1,17 @@
-# Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+# Studio de ballet Jéssica Oliveira
+O projeto visa desenvolver um software específico para uma escola de ballet, focado em otimizar sua gestão administrativa e acadêmica. A tela inicial fornecerá informações sobre a escola, enquanto uma área administrativa permitirá o controle de mensalidades para bolsistas e não bolsistas, além de facilitar o cadastro e acompanhamento de alunos. Uma tela dedicada ao plano de aula permitirá aos professores planejar e organizar as aulas de forma eficiente, incluindo detalhes sobre coreografias e objetivos pedagógicos. O objetivo é criar uma solução intuitiva que contribua para o sucesso da escola de ballet.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Artur Henrique Carvalho Amendoeira
+* Dyogo Huann de Azevedo Rocha
+* Gustavo Campos Rodrigues
+* Iury Silva Taveira
+* João Victor Teofilo Barbosa Morais 
 
-## Professores responsáveis
+## Professor responsável
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
