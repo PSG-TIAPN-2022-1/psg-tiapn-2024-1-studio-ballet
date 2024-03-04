@@ -54,21 +54,10 @@ Sistemas de Informação
 ## Problema
 
 > O Studio de Ballet Jessica Oliveira atualmente enfrenta desafios relacionados à falta de presença online e à ausência de sistemas automatizados para gerenciar suas tarefas. Como resultado, o studio pode estar enfrentando dificuldades para alcançar novos alunos, gerenciar eficientemente suas operações internas e manter registros precisos de suas atividades.
-> O contexto em que essa aplicação será usada é dentro do próprio estúdio de ballet. A aplicação envolverá o desenvolvimento de um site para o estúdio, a implementação de um sistema de gerenciamento de turmas e planejamntos de aulas, bem como possíveis funcionalidades adicionais para auxiliar na administração das finanças, na comunicação com os clientes e no acompanhamento do progresso dos alunos.
-
+>
 ## Objetivos
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
+>O Obejtivo do projeto em que essa aplicação será usada é dentro do próprio estúdio de ballet. A aplicação envolverá o desenvolvimento de um site para o estúdio, onde possui a implementação de um sistema de gerenciamento de turmas e planejamentos de aulas, bem como possíveis funcionalidades adicionais para auxiliar na administração das finanças, na comunicação com os clientes e no acompanhamento do progresso dos alunos.
+>
 ## Justificativa
 
 ......  COLOQUE AQUI O SEU TEXTO ......
