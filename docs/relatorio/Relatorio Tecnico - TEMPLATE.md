@@ -285,9 +285,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |Protótipo Interativo | MavelApp ou Figma | [FigmaProjeto](https://www.figma.com/files/team/1225090478496638204/Ballet?fuid=1223021131448006920) | 
 
 >
-> GitHub - Versionamento de código e organização
->   Teams e Trello - Reuniões e divisão de tarefas
->   Figma - Confecção de wireframes e personas
+> - GitHub - Versionamento de código e organização
+> - Teams e Trello - Reuniões e divisão de tarefas
+> - Figma - Confecção de wireframes e personas
 >
 
 
