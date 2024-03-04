@@ -272,10 +272,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 ## Divisão de Papéis
 
 # Divisão Sprint1:
-Introdução - Iury
-Especificação do projeto -  Arthur e gustavo
-Projeto de interface - Dyogo
-Metodologia - João
+> - Introdução - Iury
+> - Especificação do projeto -  Arthur e gustavo
+> - Projeto de interface - Dyogo
+> - Metodologia - João
 
  Divisão de papéis feita pelo Trello, segue abaixo link da divisão 
 > - [Link Trello](https://trello.com/b/Gw5jJOBr/organiza%C3%A7%C3%A3o-do-projeto)
