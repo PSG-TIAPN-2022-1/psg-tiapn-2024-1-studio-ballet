@@ -271,9 +271,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-......  Divisão de papéis feita pelo Trello, segue abaixo link e imagem da divisão ......
+......  Divisão de papéis feita pelo Trello, segue abaixo link da divisão 
 > - [Link Trello](https://trello.com/b/Gw5jJOBr/organiza%C3%A7%C3%A3o-do-projeto)
-> - 
 
 
 
@@ -287,14 +286,12 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 >
 > GitHub - Versionamento de código e organização
-> Teams e Trello - Reuniões e divisão de tarefas
-> Figma - Confecção de wireframes e personas
+>   Teams e Trello - Reuniões e divisão de tarefas
+>   Figma - Confecção de wireframes e personas
 >
 
 
 ## Controle de Versão
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > Criação do repositório feita diretamente na interface de plataforma de hospedagem(GitHub).
 > A ferramenta de controle de versão adotada no projeto foi o
