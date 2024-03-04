@@ -4,7 +4,7 @@ Estudio Ballet
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Sistemas de Informação
 
 ## Participantes
 > Os membros do grupo são: 
