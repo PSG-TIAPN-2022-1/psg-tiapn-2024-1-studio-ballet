@@ -271,7 +271,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-# Divisão Sprint1:
+### Divisão Sprint1:
 > - Introdução - Iury
 > - Especificação do projeto -  Arthur e gustavo
 > - Projeto de interface - Dyogo
