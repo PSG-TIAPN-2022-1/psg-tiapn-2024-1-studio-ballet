@@ -1,21 +1,18 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
-
-Ballet
+Estudio Ballet
 
 `CURSO` 
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
 ## Participantes
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
 > Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+> - João Victor Teofilo Barbosa Morais
+> - Iury Taveira
+> - Gustavo Campos
+> - Dyogo Huann
+> - Artur Henrique
 
 # Estrutura do Documento
 
