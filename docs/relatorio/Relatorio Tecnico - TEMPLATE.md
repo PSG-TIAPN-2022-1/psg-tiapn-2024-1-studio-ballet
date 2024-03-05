@@ -95,11 +95,19 @@ Sistemas de Informação
  
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
+O Studio de Ballet Jessica Oliveira enfrenta desafios significativos relacionados à falta de presença online e à ausência de sistemas automatizados para gerenciar suas tarefas. Essas dificuldades podem estar afetando a capacidade do estúdio de atrair novos alunos, gerenciar eficientemente suas operações internas e manter registros precisos de suas atividades.
 
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+O objetivo deste projeto é desenvolver uma aplicação para uso interno no próprio estúdio de ballet. A aplicação consistirá em um site para o estúdio, com a implementação de um sistema de gerenciamento de turmas e planejamento de aulas. Além disso, consideraremos a inclusão de funcionalidades adicionais para auxiliar na administração financeira, na comunicação com os clientes e no acompanhamento do progresso dos alunos.
+
+As tecnologias e ferramentas que serão utilizadas incluem:
+
+CSS: Para estilização e design visual do site.
+HTML: Para estruturar as páginas e conteúdo do site.
+Canva: Uma ferramenta de design gráfico que pode ser usada para criar elementos visuais, como logotipos, banners e imagens.
+Trello: Para gerenciar tarefas, acompanhar o progresso e colaborar com a equipe.
+Figma: Uma plataforma de design colaborativo para criar protótipos e layouts.
+Visual Studio Code: Um ambiente de desenvolvimento integrado (IDE) para escrever e testar código.
+Com essas ferramentas, esperamos criar uma solução eficaz que atenda às necessidades do Studio de Ballet Jessica Oliveira e melhore sua eficiência operacional. 
 
 ## Personas e Mapas de Empatia
 
