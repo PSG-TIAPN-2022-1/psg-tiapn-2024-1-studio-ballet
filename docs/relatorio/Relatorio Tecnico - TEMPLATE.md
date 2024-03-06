@@ -296,7 +296,7 @@ Essas interfaces foram elaboradas considerando os requisitos funcionais (como in
 
 LOGIN
 
-![Login](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/57149da0-a35c-4555-8be7-01e3aa748e06)
+![Login](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/d1455eb0-62c7-4db8-8559-ec28cb18f0e2)
 
 # Metodologia
 
