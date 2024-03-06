@@ -294,6 +294,11 @@ Essas interfaces foram elaboradas considerando os requisitos funcionais (como in
 
 ## Wireframes
 
+Tela IniciaL
+
+![Tela Inicial](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127231260/053ad860-07fc-408f-b98d-8b0296babc85)
+
+
 LOGIN
 
 ![Login](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/d1455eb0-62c7-4db8-8559-ec28cb18f0e2)
