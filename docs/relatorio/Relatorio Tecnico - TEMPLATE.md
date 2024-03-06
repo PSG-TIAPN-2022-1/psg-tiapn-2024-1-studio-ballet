@@ -298,11 +298,6 @@ LOGIN
 
 ![Login](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/57149da0-a35c-4555-8be7-01e3aa748e06)
 
-LOGON
-
-![Logon](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/221b1de1-29e2-4163-9768-4a48718a0ed5)
-
-
 # Metodologia
 
 ## Divisão de Papéis
