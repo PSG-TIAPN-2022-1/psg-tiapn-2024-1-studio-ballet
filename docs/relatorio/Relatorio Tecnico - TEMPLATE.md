@@ -218,12 +218,60 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
+O Studio de Ballet Jessica Oliveira enfrenta desafios significativos relacionados à ausência de presença online e à falta de sistemas automatizados para gerenciar suas tarefas. Essas limitações podem estar dificultando o alcance de novos alunos, a eficiência nas operações internas e a manutenção precisa dos registros de atividades.
 
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
+Para atender a essas necessidades, o projeto propõe o desenvolvimento de um site para o estúdio, com foco em gerenciamento de turmas, planejamento de aulas e outras funcionalidades relevantes. Vamos explorar as principais interfaces da solução:
+
+Página Inicial (Home):
+
+Objetivo: Apresentar o estúdio, sua missão e valores.
+Funcionalidades:
+Banner: Exibir imagens do estúdio, dançarinos e eventos.
+Informações de Contato: Incluir telefone, e-mail e endereço.
+Links para Redes Sociais: Facilitar a conexão com o público.
+Requisitos Funcionais: Exibir informações relevantes de forma atraente e acessível.
+
+Página de Turmas:
+
+Objetivo: Listar as turmas disponíveis.
+Funcionalidades:
+Detalhes da Turma: Horários, níveis, instrutores.
+Botão de Inscrição: Permitir que novos alunos se inscrevam.
+Requisitos Funcionais: Organizar as informações de forma clara e fornecer um meio de inscrição.
+
+Página de Planejamento de Aulas:
+
+Objetivo: Apresentar o cronograma de aulas.
+Funcionalidades:
+Calendário: Mostrar datas e horários das aulas.
+Filtros: Permitir que os alunos escolham turmas específicas.
+Requisitos Funcionais: Manter o calendário atualizado e permitir filtragem.
+
+Página de Administração Financeira:
+
+Objetivo: Auxiliar na gestão financeira do estúdio.
+Funcionalidades:
+Controle de Pagamentos: Registrar mensalidades e pagamentos.
+Relatórios Financeiros: Visualizar receitas e despesas.
+Requisitos Funcionais: Garantir precisão nos registros financeiros.
+
+Página de Comunicação com Clientes:
+
+Objetivo: Facilitar a comunicação entre o estúdio e os alunos.
+Funcionalidades:
+Formulário de Contato: Permitir que os alunos enviem mensagens.
+FAQ: Responder a perguntas frequentes.
+Requisitos Funcionais: Responder prontamente às consultas dos alunos.
+
+Página de Acompanhamento do Progresso dos Alunos:
+
+Objetivo: Permitir que os alunos vejam seu progresso.
+Funcionalidades:
+Histórico de Aulas: Mostrar aulas frequentadas.
+Feedback dos Instrutores: Comentários sobre o desempenho.
+Requisitos Funcionais: Manter registros precisos e fornecer feedback construtivo.
+
+Essas interfaces foram elaboradas considerando os requisitos funcionais (como inscrições, calendário de aulas e controle financeiro), os requisitos não funcionais (como usabilidade, desempenho e segurança) e as histórias de usuário abordadas nas Especificações do Projeto. A escolha das ferramentas (CSS, HTML, Canva, Trello, Figma e Visual Studio Code) deve contribuir para a eficácia e eficiência da solução.
 
 ## User Flow
 
