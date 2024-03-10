@@ -163,7 +163,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O sistema deverá ser capaz de funcionar em diferentes plataformas. | ALTA | 
 |RNF-004| O sistema deve garantir usabilidade, possuindo uma interface que seja intuitiva e fácil de ser usada. | ALTA | 
 |RNF-005| O sistema deve possuir um tempo de resposta pequeno para as solicitações do usuário. | ALTA | 
-|RNF-005| O sistema deve garantir que apenas administradores tenham acesso aos dados protegidos. | ALTA | 
+|RNF-006| O sistema deve garantir que apenas administradores tenham acesso aos dados protegidos. | ALTA | 
 
 > Com base nas Histórias de Usuário, enumere os requisitos da sua
 > solução. Classifique esses requisitos em dois grupos:
@@ -196,6 +196,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |01| O projeto deverá ser entregue até o final do semestre            |
 |02| Alunos não poderão acessar a tela do administrador               |
 |03| O sistema não disponibilizará a funcionalidade de se matricular  |
+|04| O sistema deverá ter uma restrição de capacidade, limitando a inscrição de novos alunos com base na capacidade do estúdio  |
+
 
 
 > Enumere as restrições à sua solução. Lembre-se de que as restrições
