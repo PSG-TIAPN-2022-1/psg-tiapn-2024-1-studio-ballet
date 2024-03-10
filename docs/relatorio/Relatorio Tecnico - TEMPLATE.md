@@ -76,22 +76,7 @@ Sistemas de Informação
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O projeto visa atender a um público interessado em informações detalhadas sobre o studio de ballet, incluindo horário, endereço e história. Adicionalmente, proporcionamos aos pais dos alunos fácil acesso às principais redes de contato, facilitando a comunicação e o acompanhamento das atividades dos seus filhos. Além disso, tem como objetivo auxiliar na conquista de patrocínios para a EOS, uma companhia de dança composta por bolsistas do referido studio. Também incluímos uma aba de administrador para os professores, com funcionalidades automatizadas que visam simplificar suas tarefas diárias.
  
 # Especificações do Projeto
 
