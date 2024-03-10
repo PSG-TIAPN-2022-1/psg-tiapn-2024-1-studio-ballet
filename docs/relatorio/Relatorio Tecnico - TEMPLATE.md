@@ -150,8 +150,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve apresentar uma tela de login, contendo um formulário de cadastro para que o usuário possa se cadastrar no site.| ALTA | 
+|RF-002| O sistema deve apresentar uma tela de login, contendo um formulário de cadastro para que o usuário possa se cadastrar no site. | ALTA |
+|RF-003| O sistema deve apresentar uma tela inicial contendo informações importantes sobre o estúdio. | ALTA |
+|RF-004| O sistema deve apresentar uma tela com o objetivo de gerenciar as turmas do estúdio. | ALTA |
+|RF-005| O sistema deve apresentar a funcionalidade de inscrever alunos nas turmas. | ALTA |
+|RF-006|  | ALTA |
 
 
 ### Requisitos não Funcionais
