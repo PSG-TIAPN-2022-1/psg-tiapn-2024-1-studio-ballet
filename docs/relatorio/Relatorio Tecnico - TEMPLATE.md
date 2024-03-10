@@ -187,10 +187,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|ID| Restrição                                                        |
+|--|------------------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre            |
+|02| Alunos não poderão acessar a tela do administrador               |
+|03| O sistema não disponibilizará a funcionalidade de se matricular  |
 
 
 > Enumere as restrições à sua solução. Lembre-se de que as restrições
