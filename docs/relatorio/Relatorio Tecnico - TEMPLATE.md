@@ -53,11 +53,11 @@ Sistemas de Informação
 
 ## Problema
 
-> O Studio de Ballet Jessica Oliveira atualmente enfrenta desafios relacionados à falta de presença online e à ausência de sistemas automatizados para gerenciar suas tarefas. Como resultado, o studio pode estar enfrentando dificuldades para alcançar novos alunos, gerenciar eficientemente suas operações internas e manter registros precisos de suas atividades.
->
+O Studio de Ballet Jessica Oliveira atualmente enfrenta desafios relacionados à falta de presença online e à ausência de sistemas automatizados para gerenciar suas tarefas. Como resultado, o studio pode estar enfrentando dificuldades para alcançar novos alunos, gerenciar eficientemente suas operações internas e manter registros precisos de suas atividades.
+
 ## Objetivos
->O Obejtivo do projeto em que essa aplicação será usada é dentro do próprio estúdio de ballet. A aplicação envolverá o desenvolvimento de um site para o estúdio, onde possui a implementação de um sistema de gerenciamento de turmas e planejamentos de aulas, bem como possíveis funcionalidades adicionais para auxiliar na administração das finanças, na comunicação com os clientes e no acompanhamento do progresso dos alunos.
->
+O Obejtivo do projeto em que essa aplicação será usada é dentro do próprio estúdio de ballet. A aplicação envolverá o desenvolvimento de um site para o estúdio, onde possui a implementação de um sistema de gerenciamento de turmas e planejamentos de aulas, bem como possíveis funcionalidades adicionais para auxiliar na administração das finanças, na comunicação com os clientes e no acompanhamento do progresso dos alunos.
+
 ## Justificativa
 
 A criação do site é importante para resolver a demanda do Studio Jessica Oliveira de poder transformar processos que eram feitos manualmente e no Excel em automatizados. Outro ponto importante é que com o novo sistema, um professor terá acesso ao plano de aula do outro, facilitando o trabalho em conjunto. A página inicial do site também ajudará na divulgação da escola, contribuindo para atrair mais alunos e também arrecadar patrocínios para a companhia da escola, o grupo EOS, formado por bolsistas, auxiliando nas apresentações e concursos futuros.
