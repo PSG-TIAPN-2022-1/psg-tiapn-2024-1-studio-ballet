@@ -60,19 +60,7 @@ Sistemas de Informação
 >
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A criação do site é importante para resolver a demanda do Studio Jessica Oliveira de poder transformar processos que eram feitos manualmente e no Excel em automatizados. Outro ponto importante é que com o novo sistema, um professor terá acesso ao plano de aula do outro, facilitando o trabalho em conjunto. A página inicial do site também ajudará na divulgação da escola, contribuindo para atrair mais alunos e também arrecadar patrocínios para a companhia da escola, o grupo EOS, formado por bolsistas, auxiliando nas apresentações e concursos futuros.
 
 ## Público-Alvo
 
