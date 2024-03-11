@@ -155,7 +155,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| O sistema deve apresentar uma tela inicial contendo informações importantes sobre o estúdio. | ALTA |
 |RF-004| O sistema deve apresentar uma tela com o objetivo de gerenciar as turmas do estúdio. | ALTA |
 |RF-005| O sistema deve apresentar a funcionalidade de inscrever alunos nas turmas. | ALTA |
-|RF-006|  | ALTA |
+|RF-006| O sistema deve apresentar o cronograma das aulas na tela de planejamento. | ALTA |
 
 
 ### Requisitos não Funcionais
