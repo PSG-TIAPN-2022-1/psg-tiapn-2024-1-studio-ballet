@@ -175,22 +175,6 @@ Controle de Pagamentos: Registrar mensalidades e pagamentos.
 Relatórios Financeiros: Visualizar receitas e despesas.
 Requisitos Funcionais: Garantir precisão nos registros financeiros.
 
-Página de Comunicação com Clientes:
-
-Objetivo: Facilitar a comunicação entre o estúdio e os alunos.
-Funcionalidades:
-Formulário de Contato: Permitir que os alunos enviem mensagens.
-FAQ: Responder a perguntas frequentes.
-Requisitos Funcionais: Responder prontamente às consultas dos alunos.
-
-Página de Acompanhamento do Progresso dos Alunos:
-
-Objetivo: Permitir que os alunos vejam seu progresso.
-Funcionalidades:
-Histórico de Aulas: Mostrar aulas frequentadas.
-Feedback dos Instrutores: Comentários sobre o desempenho.
-Requisitos Funcionais: Manter registros precisos e fornecer feedback construtivo.
-
 Essas interfaces foram elaboradas considerando os requisitos funcionais (como inscrições, calendário de aulas e controle financeiro), os requisitos não funcionais (como usabilidade, desempenho e segurança) e as histórias de usuário abordadas nas Especificações do Projeto. A escolha das ferramentas (CSS, HTML, Canva, Trello, Figma e Visual Studio Code) deve contribuir para a eficácia e eficiência da solução.
 
 ## User Flow
