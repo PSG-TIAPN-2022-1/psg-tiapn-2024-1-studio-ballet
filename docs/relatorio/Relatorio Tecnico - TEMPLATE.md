@@ -215,6 +215,8 @@ Tela Gerenciamento de turmas
 
 Tela de controle de alunos
 
+![19c553c948ad4e9291097ae7a23506f4](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/128499173/7913534a-76ba-4dd9-8059-6cb65893ff5c)
+
 
 
 # Metodologia
