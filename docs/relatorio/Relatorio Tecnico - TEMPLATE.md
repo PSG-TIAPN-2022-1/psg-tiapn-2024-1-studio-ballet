@@ -179,7 +179,7 @@ Essas interfaces foram elaboradas considerando os requisitos funcionais (como in
 
 ## User Flow
 
-![User Flow](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/a176b33e-aa61-432d-af04-3f5ce0e6bc44)
+![User Flow](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127787843/b5242b17-0a2e-4d48-b3db-c68f3a7c5f07)
 
 ## Wireframes
 LOGIN
