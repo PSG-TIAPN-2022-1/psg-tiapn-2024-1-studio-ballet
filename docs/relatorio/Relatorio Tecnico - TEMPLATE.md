@@ -206,6 +206,10 @@ Tela de controle de alunos
 
 # Metodologia
 
+Link Do Design Thinking
+
+https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5PDA?e=xK7Ff1
+
 ## Divisão de Papéis
 
 ### Divisão Sprint1:
