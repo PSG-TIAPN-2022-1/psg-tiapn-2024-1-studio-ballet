@@ -260,8 +260,8 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 > - `feature`: uma nova funcionalidade precisa ser introduzida
 
 # **############## SPRINT 1 ACABA AQUI #############**
-# Modelagem do processo de negócio
-AS IS 
+## Modelagem do processo de negócio
+### AS IS 
 ![Capturar](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/1f4e4330-47f6-4b0f-a6bc-85940527702f)
 
 # Projeto da Solução
