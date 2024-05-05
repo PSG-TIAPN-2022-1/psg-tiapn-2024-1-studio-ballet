@@ -264,6 +264,10 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 ### AS IS 
 ![Capturar](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/1f4e4330-47f6-4b0f-a6bc-85940527702f)
 
+### TO BE
+![To Be](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127231260/435d479d-4b04-46e3-b2f6-57649fbfadf8)
+
+
 # Projeto da Solução
 
 ......  COLOQUE AQUI O SEU TEXTO ......
