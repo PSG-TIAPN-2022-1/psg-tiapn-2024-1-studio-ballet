@@ -266,7 +266,11 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 
 ### TO BE
 ![To Be](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127231260/435d479d-4b04-46e3-b2f6-57649fbfadf8)
+### Diagrama de Entidade-Relacionamento
+![Tiaw drawio](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/6a621cfa-625d-4b1d-8f4a-fd1fee713b70)
 
+### Modelo Relacional
+![tabela drawio](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/18986aca-5e7d-4ff8-a6c9-aac608cd040f)
 
 # Projeto da Solução
 
