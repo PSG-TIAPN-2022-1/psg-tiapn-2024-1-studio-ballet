@@ -1,0 +1,113 @@
+
+header {
+    background: #02736b;
+    color: #fff;
+    padding: 2px;
+}
+h2{
+    color: #f0f0f0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    
+}
+/* fim header */ 
+h1{
+    font-family: Arial, sans-serif;
+}
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center; 
+}
+
+.student-info, .grades {
+    margin-bottom: 20px;
+}
+
+.student-info h2, .grades h2 {
+    font-size: 20px;
+    color: #666666;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.student-info p {
+    margin: 5px 0;
+    color: #555555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
