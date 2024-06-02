@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Turma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a class="navbar-brand" href="#"><img src=img/logo.png width="100" alt="100">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Financeiro</a></li>
+                    <li><a href="#servicos">Presença</a></li>
+                    <li><a href="#contato">Turmas</a></li>
+                </ul>               
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>LISTAGEM DOS ALUNOS</h2>
+        <button id="add-aluno-btn">Adicionar Aluno</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Identificador</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="alunos-list">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="aluno-form" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Adicionar/Alterar Aluno</h2>
+            <form id="aluno-form-element">
+                <label for="aluno-id">Identificador:</label>
+                <input type="text" id="aluno-id" name="aluno-id" required>
+                <label for="aluno-nome">Nome:</label>
+                <input type="text" id="aluno-nome" name="aluno-nome" required>
+                <label for="aluno-idade">Idade:</label>
+                <input type="number" id="aluno-idade" name="aluno-idade" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
