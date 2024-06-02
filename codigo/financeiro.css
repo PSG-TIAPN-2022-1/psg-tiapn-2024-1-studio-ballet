@@ -5,15 +5,17 @@
 html {
     height: 100%;
     width: 100%;
-   
+
 }
+
 body {
     background-image: url("assets/Bailarinas.jpg");
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover;
     background-position: center;
-    
-  }
+
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -67,25 +69,15 @@ body {
     background: rgba(0, 0, 0, 0.50);
     align-items: center;
     align-content: center;
-   
+
 }
-.controle p{
+
+.controle p {
     color: rgb(255, 255, 255);
     font-size: 20px;
     text-align: center;
     padding: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 600px) {
 
@@ -124,9 +116,10 @@ body {
         height: auto;
     }
 }
+
 .btn {
-    background-color: #D91C5F; 
-    color: white; 
+    background-color: #D91C5F;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -137,4 +130,62 @@ body {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: #02736b;
+    background-color: #000;
+
+
+}
+
+header {
+    background: #02736b;
+    color: #fff;
+    padding: 2px;
+}
+
+h2 {
+    color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+
 }
