@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.innerHTML = `
                     <td>${aluno.id}</td>
                     <td>${aluno.nome}</td>
-                    <td>${aluno.idade}</td>
+                    <td>${aluno.nota}</td>
                     <td>
                         <button onclick="editAluno(${index})">Editar</button>
                         <button onclick="deleteAluno(${index})">Excluir</button>
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newAluno = {
                     id: alunoFormElement['aluno-id'].value,
                     nome: alunoFormElement['aluno-nome'].value,
-                    idade: alunoFormElement['aluno-idade'].value
+                    nota: alunoFormElement['aluno-nota'].value
                 };
                 if (!alunos[currentTurma.id]) {
                     alunos[currentTurma.id] = [];
@@ -130,12 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
         alunoForm.style.display = 'block';
         alunoFormElement['aluno-id'].value = aluno.id;
         alunoFormElement['aluno-nome'].value = aluno.nome;
-        alunoFormElement['aluno-idade'].value = aluno.idade;
+        alunoFormElement['aluno-nota'].value = aluno.nota;
         alunoFormElement.onsubmit = (e) => {
             e.preventDefault();
             aluno.id = alunoFormElement['aluno-id'].value;
             aluno.nome = alunoFormElement['aluno-nome'].value;
-            aluno.idade = alunoFormElement['aluno-idade'].value;
+            aluno.nota = alunoFormElement['aluno-nota'].value;
             alunos[currentTurma.id][index] = aluno;
             localStorage.setItem('alunos', JSON.stringify(alunos));
             renderAlunos();
