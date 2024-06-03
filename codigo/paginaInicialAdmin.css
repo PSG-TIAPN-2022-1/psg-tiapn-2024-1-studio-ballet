@@ -43,9 +43,20 @@
 }
 #pAluno{
     position: relative;
-    right: 130px;
+    right: 350px;
 }
-
+#pTurma{
+    position: relative;
+    right: 273px;
+}
+#pAula{
+    position: relative;
+    right: 215px;
+}
+#pPresenca{
+    position: relative;
+    right: 120px;
+}
 #abaSobre{
     display: flex;
     justify-content: center;
