@@ -2,18 +2,21 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
 public partial class Professor
 {
+    public int Id { get; set; }
     public string Cpf { get; set; }
 
     public string Nome { get; set; }
 
     public string Disciplina { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Horario> Horarios { get; set; } = new List<Horario>();
-
+    [JsonIgnore]
     public virtual ICollection<PlanoDeAula> PlanoDeAulas { get; set; } = new List<PlanoDeAula>();
 }

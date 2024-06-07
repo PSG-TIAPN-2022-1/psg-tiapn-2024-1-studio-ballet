@@ -1,28 +1,27 @@
 ﻿using APIJessicaOliveira2.Models;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace APIJessicaOliveira2.Service.AlunoService
+namespace APIJessicaOliveira2.Services.SalaDeAulaService
 {
-    public class AlunoService : IAlunoInterface
+    public class SalaDeAulaService
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
-        public AlunoService(STUDIO_JESSICA_OLIVEIRA2Context context)
+        public SalaDeAulaService(STUDIO_JESSICA_OLIVEIRA2Context context)
         {
             _context = context;
         }
 
 
         //metodos para rotas 
-        public async Task<ServiceResponse<List<Aluno>>> CreateAluno(Aluno Aluno)
+        public async Task<ServiceResponse<List<SalaDeAula>>> CreateSala(SalaDeAula Sala)
         {
-            ServiceResponse<List<Aluno>> serviceReponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<SalaDeAula>> serviceReponse = new ServiceResponse<List<SalaDeAula>>();
             try
             {
-                _context.Add(Aluno);
+                _context.Add(Sala);
                 await _context.SaveChangesAsync();
 
-                serviceReponse.Dados = _context.Alunos.ToList();
+                serviceReponse.Dados = _context.SalaDeAulas.ToList();
             }
             catch (Exception ex)
             {
@@ -33,17 +32,17 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> DeleteAluno(int id)
+        public async Task<ServiceResponse<List<SalaDeAula>>> DeleteSala(int id)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<SalaDeAula>> serviceResponse = new ServiceResponse<List<SalaDeAula>>();
 
 
 
             try
             {
-                Aluno aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+                SalaDeAula sala = _context.SalaDeAulas.FirstOrDefault(a => a.Id == id);
 
-                if (aluno == null)
+                if (sala == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -52,9 +51,9 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                _context.Alunos.Remove(aluno);
+                _context.SalaDeAulas.Remove(sala);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.SalaDeAulas.ToList();
 
             }
             catch (Exception ex)
@@ -66,15 +65,15 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<Aluno>> GetAlunoByID(int Id)
+        public async Task<ServiceResponse<SalaDeAula>> GetSalaByID(int Id)
         {
-            ServiceResponse<Aluno> serviceResponse = new ServiceResponse<Aluno>();
+            ServiceResponse<SalaDeAula> serviceResponse = new ServiceResponse<SalaDeAula>();
 
             try
             {
-                Aluno AlunoModel = _context.Alunos.FirstOrDefault(x => x.Id == Id);
+                SalaDeAula sala = _context.SalaDeAulas.FirstOrDefault(x => x.Id == Id);
 
-                if (AlunoModel == null)
+                if (sala == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -83,7 +82,7 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                serviceResponse.Dados = AlunoModel;
+                serviceResponse.Dados = sala;
             }
             catch (Exception ex)
             {
@@ -95,14 +94,14 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> GetAlunos()
+        public async Task<ServiceResponse<List<SalaDeAula>>> GetSalas()
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<SalaDeAula>> serviceResponse = new ServiceResponse<List<SalaDeAula>>();
             await _context.SaveChangesAsync();
 
             try
             {
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.SalaDeAulas.ToList();
                 if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado";
@@ -116,24 +115,24 @@ namespace APIJessicaOliveira2.Service.AlunoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> UpdateAluno(Aluno editadoAluno)
+        public async Task<ServiceResponse<List<SalaDeAula>>> UpdateAluno(SalaDeAula editadoSala)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<SalaDeAula>> serviceResponse = new ServiceResponse<List<SalaDeAula>>();
 
             try
             {
 
-                Aluno AlunoModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoAluno.Id);
-                if (AlunoModel == null)
+                SalaDeAula sala = _context.SalaDeAulas.AsNoTracking().FirstOrDefault(x => x.Id == editadoSala.Id);
+                if (sala == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Alunos.Update(editadoAluno);
+                _context.SalaDeAulas.Update(editadoSala);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.SalaDeAulas.ToList();
 
             }
             catch (Exception ex)

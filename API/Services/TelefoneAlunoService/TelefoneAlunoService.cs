@@ -1,28 +1,27 @@
 ﻿using APIJessicaOliveira2.Models;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace APIJessicaOliveira2.Service.AlunoService
+namespace APIJessicaOliveira2.Services.TelefoneAlunoService
 {
-    public class AlunoService : IAlunoInterface
+    public class TelefoneAlunoService : ITelefoneAlunoInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
-        public AlunoService(STUDIO_JESSICA_OLIVEIRA2Context context)
+        public TelefoneAlunoService(STUDIO_JESSICA_OLIVEIRA2Context context)
         {
             _context = context;
         }
 
 
         //metodos para rotas 
-        public async Task<ServiceResponse<List<Aluno>>> CreateAluno(Aluno Aluno)
+        public async Task<ServiceResponse<List<TelefoneAluno>>> CreateTelefone(TelefoneAluno Telefone)
         {
-            ServiceResponse<List<Aluno>> serviceReponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<TelefoneAluno>> serviceReponse = new ServiceResponse<List<TelefoneAluno>>();
             try
             {
-                _context.Add(Aluno);
+                _context.Add(Telefone);
                 await _context.SaveChangesAsync();
 
-                serviceReponse.Dados = _context.Alunos.ToList();
+                serviceReponse.Dados = _context.TelefoneAlunos.ToList();
             }
             catch (Exception ex)
             {
@@ -33,17 +32,17 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> DeleteAluno(int id)
+        public async Task<ServiceResponse<List<TelefoneAluno>>> DeleteTelefone(int id)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<TelefoneAluno>> serviceResponse = new ServiceResponse<List<TelefoneAluno>>();
 
 
 
             try
             {
-                Aluno aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+                TelefoneAluno telefone = _context.TelefoneAlunos.FirstOrDefault(a => a.Id == id);
 
-                if (aluno == null)
+                if (telefone == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -52,9 +51,9 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                _context.Alunos.Remove(aluno);
+                _context.TelefoneAlunos.Remove(telefone);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.TelefoneAlunos.ToList();
 
             }
             catch (Exception ex)
@@ -66,15 +65,15 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<Aluno>> GetAlunoByID(int Id)
+        public async Task<ServiceResponse<TelefoneAluno>> GetTelefoneByID(int Id)
         {
-            ServiceResponse<Aluno> serviceResponse = new ServiceResponse<Aluno>();
+            ServiceResponse<TelefoneAluno> serviceResponse = new ServiceResponse<TelefoneAluno>();
 
             try
             {
-                Aluno AlunoModel = _context.Alunos.FirstOrDefault(x => x.Id == Id);
+                TelefoneAluno tel = _context.TelefoneAlunos.FirstOrDefault(x => x.Id == Id);
 
-                if (AlunoModel == null)
+                if (tel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -83,7 +82,7 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                serviceResponse.Dados = AlunoModel;
+                serviceResponse.Dados = tel;
             }
             catch (Exception ex)
             {
@@ -95,14 +94,14 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> GetAlunos()
+        public async Task<ServiceResponse<List<TelefoneAluno>>> GetTelefones()
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<TelefoneAluno>> serviceResponse = new ServiceResponse<List<TelefoneAluno>>();
             await _context.SaveChangesAsync();
 
             try
             {
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.TelefoneAlunos.ToList();
                 if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado";
@@ -116,24 +115,24 @@ namespace APIJessicaOliveira2.Service.AlunoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> UpdateAluno(Aluno editadoAluno)
+        public async Task<ServiceResponse<List<TelefoneAluno>>> UpdateTelefone(TelefoneAluno tel)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<TelefoneAluno>> serviceResponse = new ServiceResponse<List<TelefoneAluno>>();
 
             try
             {
 
-                Aluno AlunoModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoAluno.Id);
-                if (AlunoModel == null)
+                TelefoneAluno TelefoneModel = _context.TelefoneAlunos.AsNoTracking().FirstOrDefault(x => x.Id == tel.Id);
+                if (TelefoneModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Alunos.Update(editadoAluno);
+                _context.TelefoneAlunos.Update(tel);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.TelefoneAlunos.ToList();
 
             }
             catch (Exception ex)

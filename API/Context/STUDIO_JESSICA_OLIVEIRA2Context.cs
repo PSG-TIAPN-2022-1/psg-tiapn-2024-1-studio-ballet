@@ -15,7 +15,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
 
     public virtual DbSet<Aluno> Alunos { get; set; }
 
-    public virtual DbSet<Aluno> Disciplinas { get; set; }
+    public virtual DbSet<Disciplina> Disciplinas { get; set; }
 
     public virtual DbSet<Endereço> Endereços { get; set; }
 
@@ -33,7 +33,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
 
     public virtual DbSet<PlanoDeAula> PlanoDeAulas { get; set; }
 
-    public virtual DbSet<Professor> Professors { get; set; }
+    public virtual DbSet<Professor> Professores { get; set; }
 
     public virtual DbSet<SalaDeAula> SalaDeAulas { get; set; }
 
@@ -67,9 +67,11 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
 
         modelBuilder.Entity<Disciplina>(entity =>
         {
+            
             entity.HasKey(e => e.Codigo);
 
             entity.ToTable("Disciplina");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.Property(e => e.Codigo).ValueGeneratedNever();
             entity.Property(e => e.Nome).HasMaxLength(100);
@@ -80,6 +82,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity
                 .HasNoKey()
                 .ToTable("Endereço");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cnpj, "IX_Endereço_CNPJ");
 
@@ -103,6 +106,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity
                 .HasNoKey()
                 .ToTable("Endereço_Aluno");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpf, "IX_Endereço_Aluno_CPF");
 
@@ -126,7 +130,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity
                 .HasNoKey()
                 .ToTable("Endereço_Professor");
-
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.HasIndex(e => e.Cpf, "IX_Endereço_Professor_CPF");
 
             entity.Property(e => e.Cidade).HasMaxLength(100);
@@ -161,9 +165,10 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
 
         modelBuilder.Entity<Financeiro>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("Financeiro");
+
+            entity.HasKey(e => e.Id);
+                entity.ToTable("Financeiro");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpf, "IX_Financeiro_CPF");
 
@@ -185,6 +190,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity.HasKey(e => e.Codigo);
 
             entity.ToTable("Horario");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpfaluno, "IX_Horario_CPFAluno");
 
@@ -208,10 +214,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Horario_Disciplina");
 
-            entity.HasOne(d => d.CpfsAlunos)
-                .WithMany(p => p.Horarios)
-                .HasForeignKey(d => d.Cpfaluno)
-                .HasConstraintName("FK_Horario_Aluno");
+            
 
             entity.HasOne(d => d.Cpfsprofessor)
                 .WithMany(p => p.Horarios)
@@ -230,6 +233,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity.HasKey(e => e.Codigo);
 
             entity.HasIndex(e => e.Cpf, "IX_Nota_CPF");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.Property(e => e.Codigo).ValueGeneratedNever();
             entity.Property(e => e.Cpf)
@@ -248,6 +252,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity.HasKey(e => e.Codigo);
 
             entity.ToTable("PlanoDeAula");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpfprofessor, "IX_PlanoDeAula_CPFprofessor");
 
@@ -275,8 +280,10 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
         modelBuilder.Entity<Professor>(entity =>
         {
             entity.HasKey(e => e.Cpf);
+            
 
             entity.ToTable("Professor");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.Property(e => e.Cpf)
                 .HasMaxLength(11)
@@ -291,6 +298,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity.HasKey(e => e.NumeroSala).HasName("PK_SalaDeAula_1");
 
             entity.ToTable("SalaDeAula");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.Property(e => e.NumeroSala).ValueGeneratedNever();
         });
@@ -300,6 +308,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
             entity
                 .HasNoKey()
                 .ToTable("Telefone_Aluno");
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpf, "IX_Telefone_Aluno_CPF");
 

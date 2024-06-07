@@ -7,6 +7,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class Endereço
 {
+    public int Id;
     public string Logradouro { get; set; }
 
     public string Cidade { get; set; }

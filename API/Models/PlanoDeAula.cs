@@ -7,6 +7,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class PlanoDeAula
 {
+    public int Id;
     public string Codigo { get; set; }
 
     public string Cpfprofessor { get; set; }

@@ -1,28 +1,27 @@
 ﻿using APIJessicaOliveira2.Models;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace APIJessicaOliveira2.Service.AlunoService
+namespace APIJessicaOliveira2.Services.EndereçoService
 {
-    public class AlunoService : IAlunoInterface
+    public class EndereçoService:IEndereçoInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
-        public AlunoService(STUDIO_JESSICA_OLIVEIRA2Context context)
+        public EndereçoService(STUDIO_JESSICA_OLIVEIRA2Context context)
         {
             _context = context;
         }
 
 
         //metodos para rotas 
-        public async Task<ServiceResponse<List<Aluno>>> CreateAluno(Aluno Aluno)
+        public async Task<ServiceResponse<List<Endereço>>> CreateEndereço(Endereço endereço)
         {
-            ServiceResponse<List<Aluno>> serviceReponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<Endereço>> serviceReponse = new ServiceResponse<List<Endereço>>();
             try
             {
-                _context.Add(Aluno);
+                _context.Add(endereço);
                 await _context.SaveChangesAsync();
 
-                serviceReponse.Dados = _context.Alunos.ToList();
+                serviceReponse.Dados = _context.Endereços.ToList();
             }
             catch (Exception ex)
             {
@@ -33,17 +32,17 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> DeleteAluno(int id)
+        public async Task<ServiceResponse<List<Endereço>>> DeleteEndereço(int id)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<Endereço>> serviceResponse = new ServiceResponse<List<Endereço>>();
 
 
 
             try
             {
-                Aluno aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+                Endereço endereço = _context.Endereços.FirstOrDefault(a => a.Id == id);
 
-                if (aluno == null)
+                if (endereço == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -52,9 +51,9 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                _context.Alunos.Remove(aluno);
+                _context.Endereços.Remove(endereço);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.Endereços.ToList();
 
             }
             catch (Exception ex)
@@ -66,15 +65,15 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<Aluno>> GetAlunoByID(int Id)
+        public async Task<ServiceResponse<Endereço>> GetEndereçoByID(int Id)
         {
-            ServiceResponse<Aluno> serviceResponse = new ServiceResponse<Aluno>();
+            ServiceResponse<Endereço> serviceResponse = new ServiceResponse<Endereço>();
 
             try
             {
-                Aluno AlunoModel = _context.Alunos.FirstOrDefault(x => x.Id == Id);
+                Endereço EndereçoModel = _context.Endereços.FirstOrDefault(x => x.Id == Id);
 
-                if (AlunoModel == null)
+                if (EndereçoModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -83,7 +82,7 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                serviceResponse.Dados = AlunoModel;
+                serviceResponse.Dados = EndereçoModel;
             }
             catch (Exception ex)
             {
@@ -95,14 +94,14 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> GetAlunos()
+        public async Task<ServiceResponse<List<Endereço>>> GetEndereços()
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<Endereço>> serviceResponse = new ServiceResponse<List<Endereço>>();
             await _context.SaveChangesAsync();
 
             try
             {
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.Endereços.ToList();
                 if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado";
@@ -116,24 +115,24 @@ namespace APIJessicaOliveira2.Service.AlunoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> UpdateAluno(Aluno editadoAluno)
+        public async Task<ServiceResponse<List<Endereço>>> UpdateEndereço(Endereço editadoEndereço)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<Endereço>> serviceResponse = new ServiceResponse<List<Endereço>>();
 
             try
             {
 
-                Aluno AlunoModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoAluno.Id);
-                if (AlunoModel == null)
+                Endereço EndereçoModel = _context.Endereços.AsNoTracking().FirstOrDefault(x => x.Id == editadoEndereço.Id);
+                if (EndereçoModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Alunos.Update(editadoAluno);
+                _context.Endereços.Update(editadoEndereço);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.Endereços.ToList();
 
             }
             catch (Exception ex)

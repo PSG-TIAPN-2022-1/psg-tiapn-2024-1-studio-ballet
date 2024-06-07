@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
@@ -11,10 +12,11 @@ public partial class Disciplina
     {
         Horarios = new HashSet<Horario>();
     }
-
+    public int Id;
     public int Codigo { get; set; }
 
     public string Nome { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Horario> Horarios { get; set; }
 }

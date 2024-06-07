@@ -7,6 +7,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class Notas
 {
+    public int Id;
     public int Codigo { get; set; }
 
     public string Nota { get; set; }

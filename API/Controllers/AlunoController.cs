@@ -48,7 +48,8 @@ namespace APIJessicaOliveira2.Controllers
         //Metodo para editar
 
         [HttpPut]
-        public async Task<ActionResult<ServiceResponse<List<Aluno>>>> UpdateAluno(Aluno EditadoAluno)
+        
+        public async Task<ActionResult<ServiceResponse<List<Aluno>>>> UpdateAluno([FromBody] Aluno EditadoAluno)
         {
             ServiceResponse<List<Aluno>> serviceResponse = await _alunoInterface.UpdateAluno(EditadoAluno);
             return Ok(serviceResponse);

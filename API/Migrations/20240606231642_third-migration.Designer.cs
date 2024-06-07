@@ -4,6 +4,7 @@ using APIJessicaOliveira2.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIJessicaOliveira2.Migrations
 {
     [DbContext(typeof(STUDIO_JESSICA_OLIVEIRA2Context))]
-    partial class STUDIO_JESSICA_OLIVEIRA2ContextModelSnapshot : ModelSnapshot
+    [Migration("20240606231642_third-migration")]
+    partial class thirdmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,12 +78,6 @@ namespace APIJessicaOliveira2.Migrations
                     b.Property<int>("Codigo")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("Nome")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -106,12 +103,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasMaxLength(2)
                         .HasColumnType("nchar(2)")
                         .IsFixedLength();
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Logradouro")
                         .HasMaxLength(255)
@@ -139,12 +130,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasColumnType("nchar(2)")
                         .IsFixedLength();
 
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("Logradouro")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
@@ -170,12 +155,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasMaxLength(2)
                         .HasColumnType("nchar(2)")
                         .IsFixedLength();
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Logradouro")
                         .HasMaxLength(255)
@@ -213,12 +192,6 @@ namespace APIJessicaOliveira2.Migrations
 
             modelBuilder.Entity("APIJessicaOliveira2.Models.Financeiro", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("Cpf")
                         .HasMaxLength(11)
                         .HasColumnType("nchar(11)")
@@ -235,8 +208,6 @@ namespace APIJessicaOliveira2.Migrations
                     b.Property<decimal>("ValorBoleto")
                         .HasColumnType("decimal(10, 2)");
 
-                    b.HasKey("Id");
-
                     b.HasIndex(new[] { "Cpf" }, "IX_Financeiro_CPF");
 
                     b.ToTable("Financeiro", (string)null);
@@ -246,6 +217,9 @@ namespace APIJessicaOliveira2.Migrations
                 {
                     b.Property<int>("Codigo")
                         .HasColumnType("int");
+
+                    b.Property<string>("AlunoCpf")
+                        .HasColumnType("nchar(11)");
 
                     b.Property<int>("CodigoDisciplina")
                         .HasColumnType("int");
@@ -265,16 +239,12 @@ namespace APIJessicaOliveira2.Migrations
                     b.Property<string>("CpfsAlunosCpf")
                         .HasColumnType("nchar(11)");
 
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<int>("NumeroSala")
                         .HasColumnType("int");
 
                     b.HasKey("Codigo");
+
+                    b.HasIndex("AlunoCpf");
 
                     b.HasIndex("CodigoDisciplina");
 
@@ -300,12 +270,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasColumnName("CPF")
                         .IsFixedLength();
 
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<string>("Nota")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -329,12 +293,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasColumnType("nchar(11)")
                         .HasColumnName("CPFprofessor")
                         .IsFixedLength();
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Musica")
                         .HasMaxLength(50)
@@ -384,12 +342,6 @@ namespace APIJessicaOliveira2.Migrations
                     b.Property<int>("NumeroSala")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.HasKey("NumeroSala")
                         .HasName("PK_SalaDeAula_1");
 
@@ -403,12 +355,6 @@ namespace APIJessicaOliveira2.Migrations
                         .HasColumnType("nchar(11)")
                         .HasColumnName("CPF")
                         .IsFixedLength();
-
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Numero")
                         .HasMaxLength(15)
@@ -431,7 +377,7 @@ namespace APIJessicaOliveira2.Migrations
 
             modelBuilder.Entity("APIJessicaOliveira2.Models.EndereçoAluno", b =>
                 {
-                    b.HasOne("APIJessicaOliveira2.Models.Aluno", "Cpfs")
+                    b.HasOne("APIJessicaOliveira2.Models.Professor", "Cpfs")
                         .WithMany()
                         .HasForeignKey("Cpf")
                         .HasConstraintName("FK_Endereço_Aluno");
@@ -451,7 +397,7 @@ namespace APIJessicaOliveira2.Migrations
 
             modelBuilder.Entity("APIJessicaOliveira2.Models.Financeiro", b =>
                 {
-                    b.HasOne("APIJessicaOliveira2.Models.Aluno", "Cpfs")
+                    b.HasOne("APIJessicaOliveira2.Models.Professor", "Cpfs")
                         .WithMany()
                         .HasForeignKey("Cpf")
                         .HasConstraintName("FK_Financeiro_Aluno");
@@ -461,6 +407,10 @@ namespace APIJessicaOliveira2.Migrations
 
             modelBuilder.Entity("APIJessicaOliveira2.Models.Horario", b =>
                 {
+                    b.HasOne("APIJessicaOliveira2.Models.Aluno", null)
+                        .WithMany("Horarios")
+                        .HasForeignKey("AlunoCpf");
+
                     b.HasOne("APIJessicaOliveira2.Models.Disciplina", "Disciplina")
                         .WithMany("Horarios")
                         .HasForeignKey("CodigoDisciplina")
@@ -472,8 +422,8 @@ namespace APIJessicaOliveira2.Migrations
                         .HasForeignKey("Cpfprofessor")
                         .HasConstraintName("FK_Horario_CPF_Professor");
 
-                    b.HasOne("APIJessicaOliveira2.Models.Aluno", "CpfsAlunos")
-                        .WithMany("Horarios")
+                    b.HasOne("APIJessicaOliveira2.Models.Professor", "CpfsAlunos")
+                        .WithMany()
                         .HasForeignKey("CpfsAlunosCpf");
 
                     b.HasOne("APIJessicaOliveira2.Models.SalaDeAula", "NumeroSalas")
@@ -521,7 +471,7 @@ namespace APIJessicaOliveira2.Migrations
 
             modelBuilder.Entity("APIJessicaOliveira2.Models.TelefoneAluno", b =>
                 {
-                    b.HasOne("APIJessicaOliveira2.Models.Aluno", "CpfsAlunos")
+                    b.HasOne("APIJessicaOliveira2.Models.Professor", "CpfsAlunos")
                         .WithMany()
                         .HasForeignKey("Cpf")
                         .HasConstraintName("FK_Telefone_Aluno");

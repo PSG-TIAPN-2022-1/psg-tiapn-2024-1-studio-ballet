@@ -1,28 +1,27 @@
 ﻿using APIJessicaOliveira2.Models;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace APIJessicaOliveira2.Service.AlunoService
+namespace APIJessicaOliveira2.Services.PlanoDeAulaService
 {
-    public class AlunoService : IAlunoInterface
+    public class PlanoDeAulaService
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
-        public AlunoService(STUDIO_JESSICA_OLIVEIRA2Context context)
+        public PlanoDeAulaService(STUDIO_JESSICA_OLIVEIRA2Context context)
         {
             _context = context;
         }
 
 
         //metodos para rotas 
-        public async Task<ServiceResponse<List<Aluno>>> CreateAluno(Aluno Aluno)
+        public async Task<ServiceResponse<List<PlanoDeAula>>> CreatePlano(PlanoDeAula Plano)
         {
-            ServiceResponse<List<Aluno>> serviceReponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<PlanoDeAula>> serviceReponse = new ServiceResponse<List<PlanoDeAula>>();
             try
             {
-                _context.Add(Aluno);
+                _context.Add(Plano);
                 await _context.SaveChangesAsync();
 
-                serviceReponse.Dados = _context.Alunos.ToList();
+                serviceReponse.Dados = _context.PlanoDeAulas.ToList();
             }
             catch (Exception ex)
             {
@@ -33,17 +32,17 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> DeleteAluno(int id)
+        public async Task<ServiceResponse<List<PlanoDeAula>>> DeletePlano(int id)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<PlanoDeAula>> serviceResponse = new ServiceResponse<List<PlanoDeAula>>();
 
 
 
             try
             {
-                Aluno aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+                PlanoDeAula plano = _context.PlanoDeAulas.FirstOrDefault(a => a.Id == id);
 
-                if (aluno == null)
+                if (plano == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -52,9 +51,9 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                _context.Alunos.Remove(aluno);
+                _context.PlanoDeAulas.Remove(plano);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.PlanoDeAulas.ToList();
 
             }
             catch (Exception ex)
@@ -66,15 +65,15 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<Aluno>> GetAlunoByID(int Id)
+        public async Task<ServiceResponse<PlanoDeAula>> GetPlanoByID(int Id)
         {
-            ServiceResponse<Aluno> serviceResponse = new ServiceResponse<Aluno>();
+            ServiceResponse<PlanoDeAula> serviceResponse = new ServiceResponse<PlanoDeAula>();
 
             try
             {
-                Aluno AlunoModel = _context.Alunos.FirstOrDefault(x => x.Id == Id);
+                PlanoDeAula PlanoModel = _context.PlanoDeAulas.FirstOrDefault(x => x.Id == Id);
 
-                if (AlunoModel == null)
+                if (PlanoModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
@@ -83,7 +82,7 @@ namespace APIJessicaOliveira2.Service.AlunoService
                     return serviceResponse;
 
                 }
-                serviceResponse.Dados = AlunoModel;
+                serviceResponse.Dados = PlanoModel;
             }
             catch (Exception ex)
             {
@@ -95,14 +94,14 @@ namespace APIJessicaOliveira2.Service.AlunoService
 
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> GetAlunos()
+        public async Task<ServiceResponse<List<PlanoDeAula>>> GetPlanos()
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<PlanoDeAula>> serviceResponse = new ServiceResponse<List<PlanoDeAula>>();
             await _context.SaveChangesAsync();
 
             try
             {
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.PlanoDeAulas.ToList();
                 if (serviceResponse.Dados.Count == 0)
                 {
                     serviceResponse.Mensagem = "Nenhum dado encontrado";
@@ -116,24 +115,24 @@ namespace APIJessicaOliveira2.Service.AlunoService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Aluno>>> UpdateAluno(Aluno editadoAluno)
+        public async Task<ServiceResponse<List<PlanoDeAula>>> UpdatePlano(PlanoDeAula editadoPlano)
         {
-            ServiceResponse<List<Aluno>> serviceResponse = new ServiceResponse<List<Aluno>>();
+            ServiceResponse<List<PlanoDeAula>> serviceResponse = new ServiceResponse<List<PlanoDeAula>>();
 
             try
             {
 
-                Aluno AlunoModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoAluno.Id);
-                if (AlunoModel == null)
+                PlanoDeAula PlanoModel = _context.PlanoDeAulas.AsNoTracking().FirstOrDefault(x => x.Id == editadoPlano.Id);
+                if (PlanoModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Alunos.Update(editadoAluno);
+                _context.PlanoDeAulas.Update(editadoPlano);
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados = _context.PlanoDeAulas.ToList();
 
             }
             catch (Exception ex)

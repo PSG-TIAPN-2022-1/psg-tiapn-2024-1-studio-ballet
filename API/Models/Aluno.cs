@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
@@ -11,7 +12,7 @@ public partial class Aluno
 
     public string Nome { get; set; }
 
-    public DateTime DataDeNascimento { get; set; }
+    public DateOnly DataDeNascimento { get; set; }
 
     public string Nota { get; set; }
 
@@ -25,7 +26,8 @@ public partial class Aluno
 
     public string Senha { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Horario> Horarios { get; set; } = new List<Horario>();
-
+    [JsonIgnore]
     public virtual ICollection<Notas> Notas { get; set; } = new List<Notas>();
 }
