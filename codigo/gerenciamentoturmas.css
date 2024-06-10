@@ -4,7 +4,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #02736B; /* Fundo da página */
-  color: white; /* Cor do texto */
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html {
+  height: 100%;
 }
 
 header {
@@ -12,9 +19,11 @@ header {
   color: #fff;
   padding: 2px;
 }
-h2{
+
+h2 {
   color: #f0f0f0;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -56,6 +65,7 @@ nav {
   width: 80%;
   margin: 20px auto;
   overflow: hidden;
+  flex-grow: 1;
 }
 
 h2 {
@@ -75,8 +85,8 @@ th, td {
 }
 
 th {
-  background: #D91C5F; /* Fundo das colunas Turmas, Modalidade, Faixa Etária */
-  color: white; /* Cor do texto das colunas Turmas, Modalidade, Faixa Etária */
+  background: #D91C5F; /* Fundo das colunas*/
+  color: white; /* Cor do texto das colunas */
 }
 
 button {
@@ -143,4 +153,101 @@ button:hover {
 /* Cor do texto "Adicionar/Alterar" */
 .modal-content h2 {
   color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1px 20px; 
+  background-color: rgb(255, 215, 221);
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  color: black; 
+  flex-wrap: wrap; 
+  box-sizing: border-box;
+}
+
+#footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  flex-wrap: wrap; 
+}
+
+.footer img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  vertical-align: middle; 
+}
+
+#instagram, .endereco, .telefone, #youtube {
+  display: flex;
+  align-items: center; 
+  margin: 5px;
+}
+
+#telefone {
+  position: relative;
+  bottom: 0;
+}
+
+#redessociais, #telefone, #endereço {
+  margin: 5px;
+  width: 30%;
+  min-width: 250px; 
+}
+
+.footer h2 {
+  font-size: 30px; 
+  margin-bottom: 10px;
+  color: black; 
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #redessociais, #telefone, #endereço {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer img {
+    margin: 10px auto;
+  }
+
+  .footer h2 {
+    font-size: 22px; 
+  }
 }
