@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj": {}
+    "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj": {
+    "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
+        "projectUniqueName": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
         "projectName": "APIJessicaOliveira2",
-        "projectPath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
+        "projectPath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
         "packagesPath": "C:\\Users\\55379\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\obj\\",
+        "outputPath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\55379\\AppData\\Roaming\\NuGet\\NuGet.Config",

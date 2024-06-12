@@ -67,7 +67,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
 
         modelBuilder.Entity<Disciplina>(entity =>
         {
-            
+
             entity.HasKey(e => e.Codigo);
 
             entity.ToTable("Disciplina");
@@ -167,7 +167,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
         {
 
             entity.HasKey(e => e.Id);
-                entity.ToTable("Financeiro");
+            entity.ToTable("Financeiro");
             entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpf, "IX_Financeiro_CPF");
@@ -214,7 +214,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Horario_Disciplina");
 
-            
+
 
             entity.HasOne(d => d.Cpfsprofessor)
                 .WithMany(p => p.Horarios)
@@ -280,7 +280,7 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
         modelBuilder.Entity<Professor>(entity =>
         {
             entity.HasKey(e => e.Cpf);
-            
+
 
             entity.ToTable("Professor");
             entity.Property(e => e.Id).ValueGeneratedOnAdd();

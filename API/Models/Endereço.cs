@@ -2,12 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
 public partial class Endereço
 {
-    public int Id;
+    public int Id { get; set; }
     public string Logradouro { get; set; }
 
     public string Cidade { get; set; }
@@ -15,6 +16,6 @@ public partial class Endereço
     public string Estado { get; set; }
 
     public string Cnpj { get; set; }
-
+    [JsonIgnore]
     public virtual Escola Cnpjs { get; set; }
 }

@@ -8,7 +8,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class Horario
 {
-    public int Id;
+    public int Id { get; set; }
     public int Codigo { get; set; }
 
     public int CodigoDisciplina { get; set; }

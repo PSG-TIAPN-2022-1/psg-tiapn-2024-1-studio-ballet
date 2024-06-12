@@ -8,7 +8,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class TelefoneAluno
 {
-    public int Id;
+    public int Id { get; set; }
     public string Numero { get; set; }
 
     public string Cpf { get; set; }

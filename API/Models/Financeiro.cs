@@ -8,7 +8,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class Financeiro
 {
-    public int Id;
+    public int Id { get; set; }
     public decimal ValorBoleto { get; set; }
 
     public DateOnly DataBoleto { get; set; }

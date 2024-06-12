@@ -8,7 +8,7 @@ namespace APIJessicaOliveira2.Models;
 
 public partial class SalaDeAula
 {
-    public int Id;
+    public int Id { get; set; }
     public int NumeroSala { get; set; }
     [JsonIgnore]
     public virtual ICollection<Horario> Horarios { get; set; } = new List<Horario>();

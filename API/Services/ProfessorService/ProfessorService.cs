@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.ProfessorService
 {
-    public class ProfessorService:IProfessorInterface
+    public class ProfessorService : IProfessorInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public ProfessorService(STUDIO_JESSICA_OLIVEIRA2Context context)

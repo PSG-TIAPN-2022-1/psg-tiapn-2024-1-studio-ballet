@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.NotasService
 {
-    public class NotasService
+    public class NotasService:INotasInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public NotasService(STUDIO_JESSICA_OLIVEIRA2Context context)
@@ -32,7 +32,7 @@ namespace APIJessicaOliveira2.Services.NotasService
 
         }
 
-        public async Task<ServiceResponse<List<Notas>>> DeleteNota(int id)
+        public async Task<ServiceResponse<List<Notas>>> DeleteNotas(int id)
         {
             ServiceResponse<List<Notas>> serviceResponse = new ServiceResponse<List<Notas>>();
 
@@ -94,7 +94,7 @@ namespace APIJessicaOliveira2.Services.NotasService
 
         }
 
-        public async Task<ServiceResponse<List<Notas>>> GetNota()
+        public async Task<ServiceResponse<List<Notas>>> GetNotas()
         {
             ServiceResponse<List<Notas>> serviceResponse = new ServiceResponse<List<Notas>>();
             await _context.SaveChangesAsync();
@@ -115,7 +115,7 @@ namespace APIJessicaOliveira2.Services.NotasService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Notas>>> UpdateNota(Notas editadoNota)
+        public async Task<ServiceResponse<List<Notas>>> UpdateNotas(Notas editadoNota)
         {
             ServiceResponse<List<Notas>> serviceResponse = new ServiceResponse<List<Notas>>();
 

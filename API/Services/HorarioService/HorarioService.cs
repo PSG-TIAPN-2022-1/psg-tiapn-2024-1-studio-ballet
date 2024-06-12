@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.HorarioService
 {
-    public class HorarioService: IHorarioInterface
+    public class HorarioService : IHorarioInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public HorarioService(STUDIO_JESSICA_OLIVEIRA2Context context)

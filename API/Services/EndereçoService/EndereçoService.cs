@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.EndereçoService
 {
-    public class EndereçoService:IEndereçoInterface
+    public class EndereçoService : IEndereçoInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public EndereçoService(STUDIO_JESSICA_OLIVEIRA2Context context)

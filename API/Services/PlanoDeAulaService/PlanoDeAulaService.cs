@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.PlanoDeAulaService
 {
-    public class PlanoDeAulaService
+    public class PlanoDeAulaService:IPlanoDeAulaInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public PlanoDeAulaService(STUDIO_JESSICA_OLIVEIRA2Context context)

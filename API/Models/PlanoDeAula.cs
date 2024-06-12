@@ -2,12 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
 public partial class PlanoDeAula
 {
-    public int Id;
+    public int Id { get; set; }
     public string Codigo { get; set; }
 
     public string Cpfprofessor { get; set; }
@@ -15,8 +16,8 @@ public partial class PlanoDeAula
     public int NumeroSala { get; set; }
 
     public string Musica { get; set; }
-
+    [JsonIgnore]
     public virtual Professor Cpfsprofessor { get; set; }
-
+    [JsonIgnore]
     public virtual SalaDeAula NumeroSalas { get; set; }
 }

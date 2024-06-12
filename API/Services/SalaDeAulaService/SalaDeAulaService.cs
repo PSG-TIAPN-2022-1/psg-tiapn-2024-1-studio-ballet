@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIJessicaOliveira2.Services.SalaDeAulaService
 {
-    public class SalaDeAulaService
+    public class SalaDeAulaService:ISalaDeAulaInterface
     {
         private STUDIO_JESSICA_OLIVEIRA2Context _context;
         public SalaDeAulaService(STUDIO_JESSICA_OLIVEIRA2Context context)
@@ -115,7 +115,7 @@ namespace APIJessicaOliveira2.Services.SalaDeAulaService
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<SalaDeAula>>> UpdateAluno(SalaDeAula editadoSala)
+        public async Task<ServiceResponse<List<SalaDeAula>>> UpdateSala(SalaDeAula editadoSala)
         {
             ServiceResponse<List<SalaDeAula>> serviceResponse = new ServiceResponse<List<SalaDeAula>>();
 

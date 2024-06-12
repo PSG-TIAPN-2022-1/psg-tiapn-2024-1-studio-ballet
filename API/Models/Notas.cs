@@ -2,17 +2,18 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace APIJessicaOliveira2.Models;
 
 public partial class Notas
 {
-    public int Id;
+    public int Id{ get; set; }
     public int Codigo { get; set; }
 
     public string Nota { get; set; }
 
     public string Cpf { get; set; }
-
+    [JsonIgnore]
     public virtual Aluno CpfsAlunos { get; set; }
 }

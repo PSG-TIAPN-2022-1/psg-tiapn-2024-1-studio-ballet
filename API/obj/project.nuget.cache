@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjLLp3hZ5JI=",
+  "dgSpecHash": "+T+yzH4XRJs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
+  "projectFilePath": "C:\\Users\\55379\\Desktop\\Projetos Faculdade\\Terceiro Periodo\\Tiaw\\APIJessicaOliveira2\\APIJessicaOliveira2\\APIJessicaOliveira2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\55379\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\55379\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

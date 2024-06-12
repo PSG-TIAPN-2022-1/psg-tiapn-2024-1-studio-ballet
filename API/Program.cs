@@ -8,6 +8,8 @@ using APIJessicaOliveira2.Services.FinanceiroService;
 using APIJessicaOliveira2.Services.HorarioService;
 using APIJessicaOliveira2.Services.NotasService;
 using APIJessicaOliveira2.Services.PlanoDeAulaService;
+using APIJessicaOliveira2.Services.SalaDeAulaService;
+using APIJessicaOliveira2.Services.TelefoneAlunoService;
 
 namespace APIJessicaOliveira2
 {
@@ -31,7 +33,11 @@ namespace APIJessicaOliveira2
             builder.Services.AddScoped<IEndereçoInterface,EndereçoService>();
             builder.Services.AddScoped<IFinanceiroInterface, FinanceiroService>();
             builder.Services.AddScoped<IHorarioInterface, HorarioService>();
-            
+            builder.Services.AddScoped<INotasInterface, NotasService>();
+            builder.Services.AddScoped<IPlanoDeAulaInterface, PlanoDeAulaService>();
+            builder.Services.AddScoped<ISalaDeAulaInterface, SalaDeAulaService >();
+            builder.Services.AddScoped<ITelefoneAlunoInterface,TelefoneAlunoService>();
+
 
             builder.Services.AddDbContext<STUDIO_JESSICA_OLIVEIRA2Context>(options =>
             {
