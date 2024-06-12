@@ -122,7 +122,7 @@ namespace APIJessicaOliveira2.Services.EndereçoService
             try
             {
 
-                Endereço EndereçoModel = _context.Endereços.AsNoTracking().FirstOrDefault(x => x.Id == editadoEndereço.Id);
+                Endereço EndereçoModel = _context.Endereços.FirstOrDefault(x => x.Id == editadoEndereço.Id);
                 if (EndereçoModel == null)
                 {
                     serviceResponse.Dados = null;
@@ -130,6 +130,9 @@ namespace APIJessicaOliveira2.Services.EndereçoService
                     serviceResponse.Sucesso = false;
 
                 }
+                _context.Entry(EndereçoModel).State = EntityState.Detached;
+
+                // Anexa e atualiza o novo aluno ao contexto
                 _context.Endereços.Update(editadoEndereço);
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = _context.Endereços.ToList();

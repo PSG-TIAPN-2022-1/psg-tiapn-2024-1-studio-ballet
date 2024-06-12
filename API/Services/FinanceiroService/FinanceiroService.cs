@@ -122,7 +122,7 @@ namespace APIJessicaOliveira2.Services.FinanceiroService
             try
             {
 
-                Aluno FinanceiroModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoFinanceiro.Id);
+                Financeiro FinanceiroModel = _context.Financeiros.FirstOrDefault(x => x.Id == editadoFinanceiro.Id);
                 if (FinanceiroModel == null)
                 {
                     serviceResponse.Dados = null;
@@ -130,7 +130,9 @@ namespace APIJessicaOliveira2.Services.FinanceiroService
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Financeiros.Update(editadoFinanceiro);
+                FinanceiroModel.ValorBoleto = editadoFinanceiro.ValorBoleto;
+                FinanceiroModel.DataBoleto= editadoFinanceiro.DataBoleto;
+                FinanceiroModel.SituacaoPagamento = editadoFinanceiro.SituacaoPagamento;
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = _context.Financeiros.ToList();
 

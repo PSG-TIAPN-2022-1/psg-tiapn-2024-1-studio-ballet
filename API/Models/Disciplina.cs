@@ -12,7 +12,7 @@ public partial class Disciplina
     {
         Horarios = new HashSet<Horario>();
     }
-    public int Id;
+    public int Id { get; set; }
     public int Codigo { get; set; }
 
     public string Nome { get; set; }

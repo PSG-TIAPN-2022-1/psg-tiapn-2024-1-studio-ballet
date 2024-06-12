@@ -123,17 +123,23 @@ namespace APIJessicaOliveira2.Service.AlunoService
             try
             {
 
-                Aluno AlunoModel = _context.Alunos.AsNoTracking().FirstOrDefault(x => x.Id == editadoAluno.Id);
+                Aluno AlunoModel = _context.Alunos.FirstOrDefault(x => x.Id == editadoAluno.Id);
                 if (AlunoModel == null)
                 {
                     serviceResponse.Dados = null;
                     serviceResponse.Mensagem = "Usuario não localizado";
                     serviceResponse.Sucesso = false;
-
+                    
                 }
-                _context.Alunos.Update(editadoAluno);
+                AlunoModel.Nome = editadoAluno.Nome;
+                AlunoModel.Disciplina = editadoAluno.Disciplina;
+                AlunoModel.DataDeNascimento = editadoAluno.DataDeNascimento;
+                AlunoModel.Senha = editadoAluno.Senha;
+                AlunoModel.Email = editadoAluno.Email;
+                AlunoModel.Faltas= editadoAluno.Faltas;
+                AlunoModel.Nota = editadoAluno.Nota;
                 await _context.SaveChangesAsync();
-                serviceResponse.Dados = _context.Alunos.ToList();
+                serviceResponse.Dados =  _context.Alunos.ToList();
 
             }
             catch (Exception ex)

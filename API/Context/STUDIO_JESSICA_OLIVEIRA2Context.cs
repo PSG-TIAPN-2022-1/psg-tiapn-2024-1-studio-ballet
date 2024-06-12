@@ -306,8 +306,8 @@ public partial class STUDIO_JESSICA_OLIVEIRA2Context : DbContext
         modelBuilder.Entity<TelefoneAluno>(entity =>
         {
             entity
-                .HasNoKey()
-                .ToTable("Telefone_Aluno");
+                .HasKey(e => e.Id);
+                entity.ToTable("Telefone_Aluno");
             entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
             entity.HasIndex(e => e.Cpf, "IX_Telefone_Aluno_CPF");

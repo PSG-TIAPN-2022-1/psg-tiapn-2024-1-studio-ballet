@@ -122,7 +122,7 @@ namespace APIJessicaOliveira2.Services.DisciplinaService
             try
             {
 
-                Disciplina DisciplinaModel = _context.Disciplinas.AsNoTracking().FirstOrDefault(x => x.Id == editadoDisciplina.Id);
+                Disciplina DisciplinaModel = _context.Disciplinas.FirstOrDefault(x => x.Id == editadoDisciplina.Id);
                 if (DisciplinaModel == null)
                 {
                     serviceResponse.Dados = null;
@@ -130,7 +130,7 @@ namespace APIJessicaOliveira2.Services.DisciplinaService
                     serviceResponse.Sucesso = false;
 
                 }
-                _context.Disciplinas.Update(editadoDisciplina);
+                DisciplinaModel.Nome= editadoDisciplina.Nome;
                 await _context.SaveChangesAsync();
                 serviceResponse.Dados = _context.Disciplinas.ToList();
 
