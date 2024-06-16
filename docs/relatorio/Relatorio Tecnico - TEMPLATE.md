@@ -273,8 +273,7 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 ![tabela drawio](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/18986aca-5e7d-4ff8-a6c9-aac608cd040f)
 
 # Projeto da Solução
-
-......  COLOQUE AQUI O SEU TEXTO ......
+O projeto teve como solução para a demanda solicitada pelo Studio Jessica Oliveira o desenvolvimento de um site web, com o intuito de solucionar os problemas relatados pela empresa. O projeto contém telas para administradores e alunos. Na tela de administradores, é possível criar turmas, planejar e administrar aulas, além de se organizar financeiramente. Na tela de aluno, ele consegue se manter informado sobre sua quantidade de faltas e suas notas. Nossa tela inicial contém todos os dados do studio, turmas e uma API com a localização, garantindo facilidade para que futuros clientes encontrem o studio.
 
 ## Tecnologias Utilizadas
 
@@ -296,10 +295,8 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 ## Arquitetura da solução
 
 ......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+![Navegador (1)](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/7f6df1d2-fb3b-469b-8a2c-e82cb2379eb9)
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
 > **Exemplo do diagrama de Arquitetura**:
 > 
 > ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
