@@ -29,7 +29,7 @@ function entrar(event) {
         alert('Campo em Branco');
     }
     else if (Login.value == UserValid.Login && Senha.value == UserValid.Senha) {
-        window.location.href = 'https://www.google.com.br/';
+        window.location.href = 'paginainicial.html';
 
         let token = Math.random().toString(11).substring(2) + Math.random().toString(19).substring(2);
         localStorage.setItem('token', token);
