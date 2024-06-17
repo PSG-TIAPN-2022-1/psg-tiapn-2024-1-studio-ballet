@@ -293,14 +293,7 @@ Para a implementação da solução, utilizamos uma variedade de ferramentas e t
 > nas imagens.
 
 ## Arquitetura da solução
-
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
-![Navegador (1)](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/7f6df1d2-fb3b-469b-8a2c-e82cb2379eb9)
-
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+![Navegador (4)](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/2fd28c4d-9886-483f-bfbf-6bb1be7d6147)
 
 # Avaliação da Aplicação
 
