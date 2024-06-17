@@ -1,4 +1,5 @@
 ﻿using APIJessicaOliveira2.Models;
+using APIJessicaOliveira2.Service.AlunoService;
 using APIJessicaOliveira2.Services.ProfessorService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -53,10 +54,11 @@ namespace APIJessicaOliveira2.Controllers
 
         //Metodo para deletar
 
+        
         [HttpDelete]
         public async Task<ActionResult<ServiceResponse<List<Professor>>>> DeleteProfessor(int ID)
         {
-            ServiceResponse<Professor> serviceResponse = await _professorInterface.GetProfessorByID(ID);
+            ServiceResponse<List<Professor>> serviceResponse = await _professorInterface.DeleteProfessor(ID);
             return Ok(serviceResponse);
         }
 
