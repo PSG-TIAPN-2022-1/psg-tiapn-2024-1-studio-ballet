@@ -277,7 +277,7 @@ O projeto teve como solução para a demanda solicitada pelo Studio Jessica Oliv
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para a implementação da solução, utilizamos uma variedade de ferramentas e tecnologias. As principais ferramentas empregadas foram Visual Studio Code, Visual Studio, GitHub e SQL Server. No que diz respeito às linguagens de programação, a API foi desenvolvida em C#, enquanto o front-end foi criado utilizando HTML, CSS e JavaScript. Cada uma dessas tecnologias desempenhou um papel crucial na construção de uma aplicação robusta e eficiente, permitindo um desenvolvimento ágil e colaborativo através do GitHub, e garantindo a persistência de dados com o SQL Server.
 
 > Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
 > problema, ou seja, implementar a sua solução. Liste todas as
