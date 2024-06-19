@@ -25,6 +25,16 @@ namespace APIJessicaOliveira2
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: "MyPolici",
+                    policy =>
+                    {
+                        policy.WithOrigins( "http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                    });
+            });
+
             //Injeções de dependencia
 
             builder.Services.AddScoped<IAlunoInterface, AlunoService>();
@@ -54,6 +64,7 @@ namespace APIJessicaOliveira2
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("MyPolici");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
