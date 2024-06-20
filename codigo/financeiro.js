@@ -1,11 +1,11 @@
 document.getElementById('consultarPendencias').addEventListener('click', function() {
-    // Envie uma requisição para a página de controle para verificar pendências
-    fetch('controle.html')
-        .then(response => response.text())
-        .then(html => {
-            // Suponha que 'controle.html' retorne uma lista de alunos com pendências
-            const resultadoConsulta = 'Você tem pendências com sua mensalidade. Favor entrar em contato com nosso suporte!!';
-            document.getElementById('resultadoConsulta').textContent = resultadoConsulta;
-        })
-        .catch(error => console.error('Erro ao consultar pendências:', error));
+    const students = JSON.parse(localStorage.getItem('students')) || [];
+    
+    const hasPendingDues = students.some(student => student.status === 'Pendente');
+    
+    const resultadoConsulta = hasPendingDues 
+        ? 'Você tem pendências com sua mensalidade. Favor entrar em contato com nosso suporte!!' 
+        : 'Não há pendências na mensalidade';
+    
+    document.getElementById('resultadoConsulta').textContent = resultadoConsulta;
 });
