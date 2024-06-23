@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiBaseUrl = "http://localhost:5095/api";
+    const apiALuno = "http://localhost:5295/api/Aluno";
+    const apiDisciplina = "http://localhost:5295/api/Disciplina";
 
     const turmasList = document.getElementById('turmas-list');
     const addTurmaBtn = document.getElementById('add-turma-btn');
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchTurmas() {
         try {
-            const response = await fetch(`${apiBaseUrl}/Disciplina`);
+            const response = await fetch(`${apiDisciplina}`);
             if (!response.ok) {
                 throw new Error(`Erro ao buscar turmas: ${response.statusText}`);
             }
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchAlunos(turmaId) {
         try {
-            const response = await fetch(`${apiBaseUrl}/Aluno`);
+            const response = await fetch(`${apiALuno}`);
             if (!response.ok) {
                 throw new Error(`Erro ao buscar alunos: ${response.statusText}`);
             }
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     nome: turmaFormElement['nome'].value
                 };
                 try {
-                    const response = await fetch(`${apiBaseUrl}/Disciplina`, {
+                    const response = await fetch(`${apiDisciplina}`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -115,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.editTurma = async (id) => {
         try {
-            const response = await fetch(`${apiBaseUrl}/Disciplina/${id}`);
+            const response = await fetch(`${apiDisciplina}/${id}`);
             if (!response.ok) {
                 throw new Error(`Erro ao buscar turma: ${response.statusText}`);
             }
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 turma.codigo = turmaFormElement['codigo'].value;
                 turma.nome = turmaFormElement['nome'].value;
                 try {
-                    const response = await fetch(`${apiBaseUrl}/Disciplina/${turma.id}`, {
+                    const response = await fetch(`${apiDisciplina}${turma.id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.deleteTurma = async (id) => {
         try {
-            const deleteResponse = await fetch(`${apiBaseUrl}/Disciplina/${id}`, {
+            const deleteResponse = await fetch(`${apiDisciplina}${id}`, {
                 method: 'DELETE'
             });
             if (!deleteResponse.ok) {
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     turmaId: currentTurmaId
                 };
                 try {
-                    const response = await fetch(`${apiBaseUrl}/Aluno`, {
+                    const response = await fetch(`${apiALuno}`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -199,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.editAluno = async (id) => {
         try {
-            const response = await fetch(`${apiBaseUrl}/Aluno/${id}`);
+            const response = await fetch(`${apiALuno}${id}`);
             if (!response.ok) {
                 throw new Error(`Erro ao buscar aluno: ${response.statusText}`);
             }
@@ -214,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 aluno.nome = alunoFormElement['aluno-nome'].value;
                 aluno.nota = alunoFormElement['aluno-nota'].value;
                 try {
-                    const response = await fetch(`${apiBaseUrl}/Aluno/${aluno.id}`, {
+                    const response = await fetch(`${apiALuno}${aluno.id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.deleteAluno = async (id) => {
         try {
-            const deleteResponse = await fetch(`${apiBaseUrl}/Aluno/${id}`, {
+            const deleteResponse = await fetch(`${apiALuno}${id}`, {
                 method: 'DELETE'
             });
             if (!deleteResponse.ok) {
