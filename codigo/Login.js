@@ -1,39 +1,43 @@
-function entrar(event) {
-    event.preventDefault(); 
+const AlunoApiUrl = 'http://localhost:5095/api/Aluno';
 
-    let Login = document.querySelector('#Login');
-    let LoginLabel = document.querySelector('#LoginLabel');
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-    let Senha = document.querySelector('#Senha');
-    let SenhaLabel = document.querySelector('#SenhaLabel');
+    const loginInput = document.getElementById('Login').value.trim();
+    const senhaInput = document.getElementById('Senha').value.trim();
 
-    let ListaUser = [];
+    if (loginInput === '' || senhaInput === '') {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
 
-    let UserValid = {
-        Login: '',
-        Senha: ''
-    };
-
-    ListaUser = JSON.parse(localStorage.getItem('ListaUser'));
-
-    ListaUser.forEach((item) => {
-        if (Login.value == item.LoginCad && Senha.value == item.SenhaCad) {
-            UserValid = {
-                Login: item.LoginCad,
-                Senha: item.SenhaCad
-            };
+    try {
+        const response = await fetch(AlunoApiUrl);
+        if (!response.ok) {
+            throw new Error('Erro ao buscar dados.');
         }
-    });
 
-    if (Login.value.trim() === '' || Senha.value.trim() === '') {
-        alert('Campo em Branco');
-    }
-    else if (Login.value == UserValid.Login && Senha.value == UserValid.Senha) {
-        window.location.href = 'paginainicial.html';
+        const data = await response.json();
 
-        let token = Math.random().toString(11).substring(2) + Math.random().toString(19).substring(2);
-        localStorage.setItem('token', token);
-    } else {
-        alert('Invalido');
+        // Verifica se 'data' é um objeto com a chave 'dados'
+        if (!data || !Array.isArray(data.dados)) {
+            throw new Error('Resposta da API inválida.');
+        }
+
+        // Verifica se há algum aluno com o nome de usuário e senha fornecidos
+        const aluno = data.dados.find(item => item.nome === loginInput && item.senha === senhaInput);
+
+        if (aluno) {
+            // Armazena informações do aluno no localStorage
+            localStorage.setItem('alunoLogado', JSON.stringify(aluno));
+            
+            alert('Login bem-sucedido!');
+            window.location.href = 'paginaInicialAluno.html';
+        } else {
+            alert('Usuário ou senha inválidos.');
+        }
+    } catch (error) {
+        console.error('Erro:', error);
+        alert('Ocorreu um erro ao processar sua solicitação.');
     }
-}
+});

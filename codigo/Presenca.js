@@ -1,6 +1,6 @@
 
 //Constante recebendo url da API
-const url = 'http://localhost:5295/api/Aluno'; 
+const url = 'http://localhost:5095/api/Aluno'; 
 
 
 //Requisição GET da API
