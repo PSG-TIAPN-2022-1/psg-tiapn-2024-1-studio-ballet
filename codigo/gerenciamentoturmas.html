@@ -53,6 +53,40 @@
         </div>
     </div>
 
+    <div id="alunos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-alunos">&times;</span>
+            <h2>Alunos da Turma</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota</th>
+                        <th>Alterar Nota</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="alunos-list">
+                </tbody>
+            </table>
+            <button class="close-alunos-btn">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal para inserir a nova nota -->
+<div id="modal-nota" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inserir Nova Nota</h2>
+        <form id="form-nova-nota">
+            <label for="nova-nota">Nova Nota:</label>
+            <input type="text" id="nova-nota" name="nova-nota" required>
+            <button type="submit" id="salvar-nota-btn">Salvar</button>
+        </form>
+    </div>
+</div>
+
+
     <footer class="footer">
         <div id="footer">
             <div id="endereço">
