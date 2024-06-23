@@ -9,53 +9,29 @@
 </head>
 
 <body>
-
     <div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-    <h2 class="active underlineHover"> <a href="Login.html">LOGIN</a> </h2>
-    <h2 class="inactive underlineHover">LOGAR </h2>
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8I55V4AxE7zjVHlAUXYfPdLCh3KjN_8ShSXU-DyUCrA&s" id="icon" alt="User Icon" />
+        <div id="formContent">
+            <h2 class="active underlineHover"> <a href="Login.html">LOGIN</a> </h2>
+            <h2 class="inactive underlineHover">LOGAR </h2>
+            <div class="fadeIn first">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8I55V4AxE7zjVHlAUXYfPdLCh3KjN_8ShSXU-DyUCrA&s" id="icon" alt="User Icon" />
+            </div>
+            <form>
+                <input type="text" id="Nome" class="fadeIn second" placeholder="Nome">
+                <label id="LabelNome" for="Nome"></label>
+                <input type="text" id="Cpf" class="fadeIn second" placeholder="CPF">
+                <label id="LabelCpf" for="Cpf"></label>
+                <input type="text" id="Modalidade" class="fadeIn second" placeholder="Modalidade">
+                <label id="LabelModalidade" for="Modalidade"></label>
+                <input type="password" id="Senha" class="fadeIn second" placeholder="Senha">
+                <label id="LabelSenha" for="Senha"></label>
+                <input type="password" id="ConfirmeSenha" class="fadeIn third" placeholder="Confirme a senha">
+                <label id="LabelConfirmeSenha" for="ConfirmeSenha"></label>
+                <input id="submitBtn" type="submit" class="fadeIn fourth" value="Logar">
+            </form>
+        </div>
     </div>
-
-    <!-- Login Form -->
-    <form>
-
-      <input type="text" id="Nome" class="fadeIn second" placeholder="Nome">
-      <label id="LabelNome" for="Nome"></label>
-
-      <input type="text" id="Login" class="fadeIn second" placeholder="Login">
-      <label id="LabelLogin" for="Login"></label>
-
-      <input type="text" id="Cpf" class="fadeIn second" placeholder="CPF">
-      <label id="LabelCpf" for="Cpf"></label>
-
-      <input type="text" id="Modalidade" class="fadeIn second" placeholder="Modalidade">
-      <label id="LabelModalidade" for="Modalidade"></label>
-
-      <input type="password" id="Senha" class="fadeIn second" placeholder="Senha">
-      <label id="LabelSenha" for="Senha"></label>
-
-      <input type="password" id="ConfirmeSenha" class="fadeIn third" placeholder="Confirme a senha">
-      <label id="LabelConfirmeSenha" for="ConfirmeSenha"></label>
-
-
-
-      <input onclick='cadastrar()' type="submit" class="fadeIn fourth" value="Logar">
-
-    </form>
-
-    <!-- Remind Passowrd -->
-
-  </div>
-
-</div>
-    
-<script src="Logon.js"></script>
-
+    <script src="Logon.js"></script>
 </body>
 
 </html>
