@@ -1,6 +1,37 @@
 
         // Constante recebendo url da API
-        const url = 'http://localhost:5095/api/Financeiro';
+        const url = 'http://localhost:5295/api/Financeiro';
+
+
+
+
+
+        async function atualizarSituacaoPagamento(aluno, situacao) {
+            try {
+                // Atualiza apenas a situação de pagamento
+                aluno.situacaoPagamento = situacao;
+        
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(aluno)
+                });
+        
+                if (!response.ok) {
+                    throw new Error(`Erro ao atualizar o aluno: ${response.statusText}`);
+                }
+        
+                const data = await response.json();
+                console.log('Aluno atualizado com sucesso:', data);
+                return data;
+            } catch (error) {
+                console.error('Erro ao atualizar o aluno:', error);
+                throw error;
+            }
+        }
+        
 
 
 
