@@ -87,7 +87,7 @@ async function cadastrar(event) {
             dataDeNascimento: "2000-01-01",  // Ajustar para uma data de nascimento válida
             nota: null,
             disciplina: Modalidade.value,
-            faltas: null,
+            faltas: "0",
             email: null,
             senha: Senha.value
         };
