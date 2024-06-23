@@ -1,5 +1,5 @@
 
-        // Constante recebendo url da API Financeiro
+        // Constante recebendo url da API
         const url = 'http://localhost:5295/api/Financeiro';
 
 
