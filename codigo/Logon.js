@@ -1,14 +1,15 @@
+const AlunoApiUrl = 'http://localhost:5095/api/Aluno';
 let Nome = document.querySelector('#Nome');
 let LabelNome = document.querySelector('#LabelNome');
 let validNome = false;
 
-let Login = document.querySelector('#Login');
-let LabelLogin = document.querySelector('#LabelLogin');
-let validLogin = false;
-
 let Cpf = document.querySelector('#Cpf');
 let LabelCpf = document.querySelector('#LabelCpf');
 let validCpf = false;
+
+let Modalidade = document.querySelector('#Modalidade');
+let LabelModalidade = document.querySelector('#LabelModalidade');
+let validModalidade = false;
 
 let Senha = document.querySelector('#Senha');
 let LabelSenha = document.querySelector('#LabelSenha');
@@ -31,16 +32,6 @@ Nome.addEventListener('keyup', () => {
     }
 });
 
-Login.addEventListener('keyup', () => {
-    if (Login.value.length <= 4) {
-        Login.setAttribute('style', 'border-color: red');
-        validLogin = false;
-    } else {
-        Login.setAttribute('style', 'border-color: white');
-        validLogin = true;
-    }
-});
-
 Cpf.addEventListener('keyup', () => {
     const cpfValue = Cpf.value;
     const cpfRegex = /^[0-9]*$/;
@@ -51,6 +42,16 @@ Cpf.addEventListener('keyup', () => {
     } else {
         Cpf.setAttribute('style', 'border-color: white');
         validCpf = true;
+    }
+});
+
+Modalidade.addEventListener('keyup', () => {
+    if (Modalidade.value.length == 0) {
+        Modalidade.setAttribute('style', 'border-color: red');
+        validModalidade = false;
+    } else {
+        Modalidade.setAttribute('style', 'border-color: white');
+        validModalidade = true;
     }
 });
 
@@ -74,22 +75,48 @@ ConfirmeSenha.addEventListener('keyup', () => {
     }
 });
 
-function cadastrar() {
-    if (validNome && validLogin && validCpf && validSenha && validConfirmeSenha) {
-        let ListaUser = JSON.parse(localStorage.getItem('ListaUser') || '[]');
+document.querySelector('#submitBtn').addEventListener('click', cadastrar);
 
-        ListaUser.push({
-            LoginCad: Login.value,
-            CpfCad: Cpf.value,
-            ConfirmeSenhaCad: ConfirmeSenha.value,
-            NomeCad: Nome.value,
-            SenhaCad: Senha.value,
-        });
+async function cadastrar(event) {
+    event.preventDefault();  // Prevenir o envio padrão do formulário
 
-        localStorage.setItem('ListaUser', JSON.stringify(ListaUser));
-        window.location.href = 'Login.html';
-        alert('Cadastrado');
+    if (validNome && validCpf && validModalidade && validSenha && validConfirmeSenha) {
+        let alunoData = {
+            cpf: Cpf.value,
+            nome: Nome.value,
+            dataDeNascimento: "2000-01-01",  // Ajustar para uma data de nascimento válida
+            nota: null,
+            disciplina: Modalidade.value,
+            faltas: null,
+            email: null,
+            senha: Senha.value
+        };
+
+        console.log("Dados do aluno a serem enviados:", alunoData);
+
+        try {
+            let response = await fetch(AlunoApiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(alunoData)
+            });
+
+            if (response.ok) {
+                alert('Cadastrado com sucesso!');
+                window.location.href = 'Login.html';
+            } else {
+                let errorData = await response.json();
+                console.error('Erro no cadastro:', errorData);
+                let errorMessages = Object.values(errorData.errors).flat().join('\n');
+                alert('Erro ao cadastrar: ' + errorMessages);
+            }
+        } catch (error) {
+            console.error('Erro de rede:', error);
+            alert('Erro ao cadastrar. Tente novamente.');
+        }
     } else {
-        alert('Campo Invalido');
+        alert('Campo Inválido');
     }
 }
