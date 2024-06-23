@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = "http://localhost:5295/api/Disciplina";
-    const apiUrlAluno = "http://localhost:5295/api/Aluno";
+    const apiUrl = "http://localhost:5095/api/Disciplina";
+    const apiUrlAluno = "http://localhost:5095/api/Aluno";
 
     const turmasList = document.getElementById('turmas-list');
     const addTurmaBtn = document.getElementById('add-turma-btn');
