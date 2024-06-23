@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let turmas = JSON.parse(localStorage.getItem('turmas')) || [];
-    let alunos = JSON.parse(localStorage.getItem('alunos')) || {};
+    const apiBaseUrl = "http://localhost:5295/api";
 
     const turmasList = document.getElementById('turmas-list');
     const addTurmaBtn = document.getElementById('add-turma-btn');
@@ -9,63 +8,100 @@ document.addEventListener('DOMContentLoaded', () => {
     const alunoForm = document.getElementById('aluno-form');
     const alunoFormElement = document.getElementById('aluno-form-element');
     const alunosList = document.getElementById('alunos-list');
+    
+    let currentTurmaId = null;
 
-    function renderTurmas() {
+    async function fetchTurmas() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/Disciplina`);
+            if (!response.ok) {
+                throw new Error(`Erro ao buscar turmas: ${response.statusText}`);
+            }
+            const turmas = await response.json();
+            renderTurmas(turmas);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function fetchAlunos(turmaId) {
+        try {
+            const response = await fetch(`${apiBaseUrl}/Aluno`);
+            if (!response.ok) {
+                throw new Error(`Erro ao buscar alunos: ${response.statusText}`);
+            }
+            const alunos = await response.json();
+            renderAlunos(alunos.filter(aluno => aluno.turmaId === turmaId));
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    function renderTurmas(turmas) {
         turmasList.innerHTML = '';
         turmas.forEach((turma, index) => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${turma.id}</td>
-                <td>${turma.modalidade}</td>
-                <td>${turma.faixaEtaria}</td>
+                <td>${turma.codigo}</td>
+                <td>${turma.nome}</td>
                 <td>
-                    <button onclick="editTurma(${index})">Editar</button>
-                    <button onclick="deleteTurma(${index})">Excluir</button>
+                    <button onclick="editTurma(${turma.id})">Editar</button>
+                    <button onclick="deleteTurma(${turma.id})">Excluir</button>
                 </td>
             `;
             tr.querySelector('td').addEventListener('click', () => {
-                localStorage.setItem('currentTurma', JSON.stringify(turma));
-                window.location.href = 'gerenciamentoturmas-aluno.html';
+                currentTurmaId = turma.id;
+                fetchAlunos(turma.id);
             });
             turmasList.appendChild(tr);
         });
     }
 
-    function renderAlunos() {
-        const currentTurma = JSON.parse(localStorage.getItem('currentTurma'));
+    function renderAlunos(alunos) {
         alunosList.innerHTML = '';
-        if (alunos[currentTurma.id]) {
-            alunos[currentTurma.id].forEach((aluno, index) => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${aluno.id}</td>
-                    <td>${aluno.nome}</td>
-                    <td>${aluno.nota}</td>
-                    <td>
-                        <button onclick="editAluno(${index})">Editar</button>
-                        <button onclick="deleteAluno(${index})">Excluir</button>
-                    </td>
-                `;
-                alunosList.appendChild(tr);
-            });
-        }
+        alunos.forEach((aluno, index) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${aluno.id}</td>
+                <td>${aluno.nome}</td>
+                <td>${aluno.nota}</td>
+                <td>
+                    <button onclick="editAluno(${aluno.id})">Editar</button>
+                    <button onclick="deleteAluno(${aluno.id})">Excluir</button>
+                </td>
+            `;
+            alunosList.appendChild(tr);
+        });
     }
 
     if (addTurmaBtn) {
         addTurmaBtn.addEventListener('click', () => {
             turmaForm.style.display = 'block';
             turmaFormElement.reset();
-            turmaFormElement.onsubmit = (e) => {
+            turmaFormElement.onsubmit = async (e) => {
                 e.preventDefault();
                 const newTurma = {
                     id: turmaFormElement['turma-id'].value,
-                    faixaEtaria: turmaFormElement['faixa-etaria'].value,
-                    modalidade: turmaFormElement['modalidade'].value
+                    codigo: turmaFormElement['codigo'].value,
+                    nome: turmaFormElement['nome'].value
                 };
-                turmas.push(newTurma);
-                localStorage.setItem('turmas', JSON.stringify(turmas));
-                renderTurmas();
-                turmaForm.style.display = 'none';
+                try {
+                    const response = await fetch(`${apiBaseUrl}/Disciplina`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newTurma)
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro ao salvar turma: ${response.statusText}`);
+                    }
+                    fetchTurmas();
+                    turmaForm.style.display = 'none';
+                } catch (error) {
+                    console.error(error);
+                }
             };
         });
     }
@@ -77,81 +113,141 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.editTurma = (index) => {
-        const turma = turmas[index];
-        turmaForm.style.display = 'block';
-        turmaFormElement['turma-id'].value = turma.id;
-        turmaFormElement['faixa-etaria'].value = turma.faixaEtaria;
-        turmaFormElement['modalidade'].value = turma.modalidade;
-        turmaFormElement.onsubmit = (e) => {
-            e.preventDefault();
-            turma.id = turmaFormElement['turma-id'].value;
-            turma.faixaEtaria = turmaFormElement['faixa-etaria'].value;
-            turma.modalidade = turmaFormElement['modalidade'].value;
-            turmas[index] = turma;
-            localStorage.setItem('turmas', JSON.stringify(turmas));
-            renderTurmas();
-            turmaForm.style.display = 'none';
-        };
+    window.editTurma = async (id) => {
+        try {
+            const response = await fetch(`${apiBaseUrl}/Disciplina/${id}`);
+            if (!response.ok) {
+                throw new Error(`Erro ao buscar turma: ${response.statusText}`);
+            }
+            const turma = await response.json();
+            turmaForm.style.display = 'block';
+            turmaFormElement['turma-id'].value = turma.id;
+            turmaFormElement['codigo'].value = turma.codigo;
+            turmaFormElement['nome'].value = turma.nome;
+            turmaFormElement.onsubmit = async (e) => {
+                e.preventDefault();
+                turma.id = turmaFormElement['turma-id'].value;
+                turma.codigo = turmaFormElement['codigo'].value;
+                turma.nome = turmaFormElement['nome'].value;
+                try {
+                    const response = await fetch(`${apiBaseUrl}/Disciplina/${turma.id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(turma)
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro ao atualizar turma: ${response.statusText}`);
+                    }
+                    fetchTurmas();
+                    turmaForm.style.display = 'none';
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-    window.deleteTurma = (index) => {
-        turmas.splice(index, 1);
-        localStorage.setItem('turmas', JSON.stringify(turmas));
-        renderTurmas();
+    window.deleteTurma = async (id) => {
+        try {
+            const deleteResponse = await fetch(`${apiBaseUrl}/Disciplina/${id}`, {
+                method: 'DELETE'
+            });
+            if (!deleteResponse.ok) {
+                throw new Error(`Erro ao excluir turma: ${deleteResponse.statusText}`);
+            }
+            fetchTurmas();
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     if (document.getElementById('add-aluno-btn')) {
         document.getElementById('add-aluno-btn').addEventListener('click', () => {
             alunoForm.style.display = 'block';
             alunoFormElement.reset();
-            alunoFormElement.onsubmit = (e) => {
+            alunoFormElement.onsubmit = async (e) => {
                 e.preventDefault();
-                const currentTurma = JSON.parse(localStorage.getItem('currentTurma'));
                 const newAluno = {
                     id: alunoFormElement['aluno-id'].value,
                     nome: alunoFormElement['aluno-nome'].value,
-                    nota: alunoFormElement['aluno-nota'].value
+                    nota: alunoFormElement['aluno-nota'].value,
+                    turmaId: currentTurmaId
                 };
-                if (!alunos[currentTurma.id]) {
-                    alunos[currentTurma.id] = [];
+                try {
+                    const response = await fetch(`${apiBaseUrl}/Aluno`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(newAluno)
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro ao salvar aluno: ${response.statusText}`);
+                    }
+                    fetchAlunos(currentTurmaId);
+                    alunoForm.style.display = 'none';
+                } catch (error) {
+                    console.error(error);
                 }
-                alunos[currentTurma.id].push(newAluno);
-                localStorage.setItem('alunos', JSON.stringify(alunos));
-                renderAlunos();
-                alunoForm.style.display = 'none';
             };
         });
     }
 
-    window.editAluno = (index) => {
-        const currentTurma = JSON.parse(localStorage.getItem('currentTurma'));
-        const aluno = alunos[currentTurma.id][index];
-        alunoForm.style.display = 'block';
-        alunoFormElement['aluno-id'].value = aluno.id;
-        alunoFormElement['aluno-nome'].value = aluno.nome;
-        alunoFormElement['aluno-nota'].value = aluno.nota;
-        alunoFormElement.onsubmit = (e) => {
-            e.preventDefault();
-            aluno.id = alunoFormElement['aluno-id'].value;
-            aluno.nome = alunoFormElement['aluno-nome'].value;
-            aluno.nota = alunoFormElement['aluno-nota'].value;
-            alunos[currentTurma.id][index] = aluno;
-            localStorage.setItem('alunos', JSON.stringify(alunos));
-            renderAlunos();
-            alunoForm.style.display = 'none';
-        };
+    window.editAluno = async (id) => {
+        try {
+            const response = await fetch(`${apiBaseUrl}/Aluno/${id}`);
+            if (!response.ok) {
+                throw new Error(`Erro ao buscar aluno: ${response.statusText}`);
+            }
+            const aluno = await response.json();
+            alunoForm.style.display = 'block';
+            alunoFormElement['aluno-id'].value = aluno.id;
+            alunoFormElement['aluno-nome'].value = aluno.nome;
+            alunoFormElement['aluno-nota'].value = aluno.nota;
+            alunoFormElement.onsubmit = async (e) => {
+                e.preventDefault();
+                aluno.id = alunoFormElement['aluno-id'].value;
+                aluno.nome = alunoFormElement['aluno-nome'].value;
+                aluno.nota = alunoFormElement['aluno-nota'].value;
+                try {
+                    const response = await fetch(`${apiBaseUrl}/Aluno/${aluno.id}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(aluno)
+                    });
+                    if (!response.ok) {
+                        throw new Error(`Erro ao atualizar aluno: ${response.statusText}`);
+                    }
+                    fetchAlunos(currentTurmaId);
+                    alunoForm.style.display = 'none';
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-    window.deleteAluno = (index) => {
-        const currentTurma = JSON.parse(localStorage.getItem('currentTurma'));
-        alunos[currentTurma.id].splice(index, 1);
-        localStorage.setItem('alunos', JSON.stringify(alunos));
-        renderAlunos();
+    window.deleteAluno = async (id) => {
+        try {
+            const deleteResponse = await fetch(`${apiBaseUrl}/Aluno/${id}`, {
+                method: 'DELETE'
+            });
+            if (!deleteResponse.ok) {
+                throw new Error(`Erro ao excluir aluno: ${deleteResponse.statusText}`);
+            }
+            fetchAlunos(currentTurmaId);
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-    renderTurmas();
-    if (alunosList) {
-        renderAlunos();
-    }
+    fetchTurmas();
 });
