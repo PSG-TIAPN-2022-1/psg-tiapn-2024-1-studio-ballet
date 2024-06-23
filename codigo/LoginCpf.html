@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="LoginCpf.css">
+</head>
+
+<body>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+
+      <h2 class="active underlineHover"> <a href="Login.html">LOGIN</a> </h2>
+      <h2 class="inactive underlineHover"><a href="Logon.html">LOGAR</a></h2>
+
+
+      <div class="fadeIn first">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8I55V4AxE7zjVHlAUXYfPdLCh3KjN_8ShSXU-DyUCrA&s"
+          id="icon" alt="User Icon" />
+      </div>
+
+
+      <form onsubmit="entrar(event)">
+        <input type="text" id="Login" class="fadeIn second" placeholder="login">
+        <label id="LoginLabel" for="Login"></label>
+
+        <input type="text" id="Cpf" class="fadeIn third" placeholder="cpf">
+        <label id="CpfLabel" for="Cpf"></label>
+
+        <input type="password" id="Senha" class="fadeIn second" placeholder="Senha">
+        <label id="LabelSenha" for="Senha"></label>
+
+        <input type="submit" class="fadeIn fourth" value="Troca de senha">
+      </form>
+
+    </div>
+  </div>
+
+  <script src="LoginCpf.js"></script>
+</body>
+
+</html>

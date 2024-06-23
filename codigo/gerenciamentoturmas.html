@@ -10,8 +10,7 @@
     <header>
         <div class="header">
             <div class="logo">
-                <a class="navbar-brand" href="#"><img src=img/logo.png width="100" alt="100">
-                </a>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" width="100" alt="Logo"></a>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -29,9 +28,9 @@
         <table>
             <thead>
                 <tr>
-                    <th>Turmas</th>
-                    <th>Modalidade</th>
-                    <th>Faixa Etária</th>
+                    <th>Identificador</th>
+                    <th>Código</th>
+                    <th>Nome</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -44,17 +43,81 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Adicionar/Alterar Turma</h2>
-            <form id="turma-form-element">
-                <label for="turma-id">Identificador:</label>
-                <input type="text" id="turma-id" name="turma-id" required>
-                <label for="faixa-etaria">Faixa Etária:</label>
-                <input type="text" id="faixa-etaria" name="faixa-etaria" required>
-                <label for="modalidade">Modalidade:</label>
-                <input type="text" id="modalidade" name="modalidade" required>
-                <button type="submit">Salvar</button>
+            <form id="turma-form-element">              
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <button type="submit" id="salvar-btn">Salvar</button>
             </form>
         </div>
     </div>
+
+    <div id="alunos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-alunos">&times;</span>
+            <h2>Alunos da Turma</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota</th>
+                        <th>Alterar Nota</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="alunos-list">
+                </tbody>
+            </table>
+            <button class="close-alunos-btn">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal para inserir a nova nota -->
+<div id="modal-nota" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inserir Nova Nota</h2>
+        <form id="form-nova-nota">
+            <label for="nova-nota">Nova Nota:</label>
+            <input type="text" id="nova-nota" name="nova-nota" required>
+            <button type="submit" id="salvar-nota-btn">Salvar</button>
+        </form>
+    </div>
+</div>
+
+
+    <footer class="footer">
+        <div id="footer">
+            <div id="endereço">
+                <h2>Endereço</h2>
+                <div class="endereco">
+                    <p><img src="img/pin_4723726.png" alt="locLogo"></p>
+                    <p>Rua Visconde do Rio das Velhas, 163, Centro, Matozinhos</p>
+                </div>
+                
+            </div>
+            <div id="telefone">
+                <h2>Telefone</h2>
+                <div class="telefone">
+                    <p><img src="img/whatsapp_3670051.png" alt="wppLogo"></p>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5531995778825&text="><p>+55 31 99577-8825</p></a>
+                </div>
+                
+            </div>
+            <div id="redessociais">
+                <h2>Redes sociais</h2>
+                <div id="instagram">
+                    <p><img src="img/instagram_2111463.png" alt="InstaLogo"></p>
+                    <a target="_blank" href="https://www.instagram.com/studio_jessicaoliveira24?igsh=MzVmZTg4eWFqYTNn"><p>Instagram</p></a>
+                </div>
+                <div id="youtube">
+                    <p><img src="img/youtube_1384060.png" alt="logoYoutube"></p>
+                    <a target="_blank" href="https://www.youtube.com/@balletjessicaoliveira1505/featured">Youtube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="gerenciamentoturmas.js"></script>
 </body>

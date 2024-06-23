@@ -43,8 +43,13 @@
 }
 #pAluno{
     position: relative;
-    right: 130px;
+    right: 230px;
 }
+#pNota{
+    position: relative;
+    right: 105px;
+}
+
 #abaSobre{
     display: flex;
     justify-content: center;

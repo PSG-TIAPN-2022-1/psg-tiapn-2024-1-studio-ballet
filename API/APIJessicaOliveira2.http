@@ -1,0 +1,6 @@
+@APIJessicaOliveira2_HostAddress = http://localhost:5295
+
+GET {{APIJessicaOliveira2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

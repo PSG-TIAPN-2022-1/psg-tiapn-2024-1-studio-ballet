@@ -273,12 +273,11 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 ![tabela drawio](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/18986aca-5e7d-4ff8-a6c9-aac608cd040f)
 
 # Projeto da Solução
-
-......  COLOQUE AQUI O SEU TEXTO ......
+O projeto teve como solução para a demanda solicitada pelo Studio Jessica Oliveira o desenvolvimento de um site web, com o intuito de solucionar os problemas relatados pela empresa. O projeto contém telas para administradores e alunos. Na tela de administradores, é possível criar turmas, planejar e administrar aulas, além de se organizar financeiramente. Na tela de aluno, ele consegue se manter informado sobre sua quantidade de faltas e suas notas. Nossa tela inicial contém todos os dados do studio, turmas e uma API com a localização, garantindo facilidade para que futuros clientes encontrem o studio.
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Para a implementação da solução, utilizamos uma variedade de ferramentas e tecnologias. As principais ferramentas empregadas foram Visual Studio Code, Visual Studio, GitHub e SQL Server. No que diz respeito às linguagens de programação, a API foi desenvolvida em C#, enquanto o front-end foi criado utilizando HTML, CSS e JavaScript. Cada uma dessas tecnologias desempenhou um papel crucial na construção de uma aplicação robusta e eficiente, permitindo um desenvolvimento ágil e colaborativo através do GitHub, e garantindo a persistência de dados com o SQL Server.
 
 > Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
 > problema, ou seja, implementar a sua solução. Liste todas as
@@ -294,16 +293,7 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 > nas imagens.
 
 ## Arquitetura da solução
-
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
-
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
-
+![Navegador (4)](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/2fd28c4d-9886-483f-bfbf-6bb1be7d6147)
 
 # Avaliação da Aplicação
 

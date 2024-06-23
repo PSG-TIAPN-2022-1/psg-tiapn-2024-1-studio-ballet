@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Jessica Oliveira</title>
+    <link rel="stylesheet" href="Presenca.css">
+    <script src="Presenca.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a class="navbar-brand" href="#"><img src=img/logo.png width="100" alt="100">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="paginaInicialAdmin.html">Início</a></li>
+                    <li><a href="financeiro.html">Financeiro</a></li>
+                    <li><a href="telaPlanejamento.html">Aulas</a></li>
+                    <li><a href="gerenciamentoturmas.html">Turmas</a></li>
+                </ul>               
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Sistema de Chamadas</h1>
+  
+  <!-- Tabela de turmas -->
+  <table>
+    <thead>
+      <tr>
+        <th>Código da Turma</th>
+        <th>Disciplina</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+     
+      <tr>
+        <td class="code1">1</td>
+        <td>Baby Class</td>
+        <td><button onclick="toggleAlunos('alunos-001')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          
+          <div id="alunos-001" class="alunos">
+            <h3>Alunos - Baby Class</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code1">          
+            </ul>
+            
+            <button class="salva1"  onclick="toggleAlunos('alunos-001')">Salvar</button>
+            
+          </div>
+        </td>
+      </tr>
+      
+      
+      <tr>
+        <td class="code2">2</td>
+        <td>Baby 2</td>
+        <td><button onclick="toggleAlunos('alunos-002')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          
+          <div id="alunos-002" class="alunos">
+            <h3>Alunos - Baby 2</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code2">
+                
+              
+            </ul>
+           
+            <button class="salva2" onclick="toggleAlunos('alunos-002')">Salvar</button>
+            
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="code3">3</td>
+        <td>Infantil</td>
+        <td><button onclick="toggleAlunos('alunos-003')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          
+          <div id="alunos-003" class="alunos">
+            <h3>Alunos - Infantil</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code3">
+                
+              
+            </ul>
+            
+            <button class="salva3"  onclick="toggleAlunos('alunos-003')">Salvar</button>
+           
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="code4">4</td>
+        <td>Preparatório</td>
+        <td><button onclick="toggleAlunos('alunos-004')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          
+          <div id="alunos-004" class="alunos">
+            <h3>Alunos - Preparatório</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code4">
+                
+              
+            </ul>
+            
+            <button class="salva4"  onclick="toggleAlunos('alunos-004')">Salvar</button>
+            
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="code5">5</td>
+        <td>Básico 1</td>
+        <td><button onclick="toggleAlunos('alunos-005')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          
+          <div id="alunos-005" class="alunos">
+            <h3>Alunos - Básico 1</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code5">
+                
+              
+            </ul>
+           
+            <button class="salva5"  onclick="toggleAlunos('alunos-005')">Salvar</button>
+            
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="code6">6</td>
+        <td>Juvenil</td>
+        <td><button onclick="toggleAlunos('alunos-006')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+        
+          <div id="alunos-006" class="alunos">
+            <h3>Alunos - Juvenil</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code6">
+                
+             
+            </ul>
+            
+            <button class="salva6"  onclick="toggleAlunos('alunos-006')">Salvar</button>
+           
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="code7">7</td>
+        <td>Adulto</td>
+        <td><button onclick="toggleAlunos('alunos-007')">Ver Alunos</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+         
+          <div id="alunos-007" class="alunos">
+            <h3>Alunos - Adulto</h3>
+            <p>Marque os faltantes</p>
+            <ul id="code7">
+                
+              
+            </ul>
+            <!-- Botão para Salvar lista de alunos -->
+            <button class="salva7"  onclick="toggleAlunos('alunos-007')">Salvar</button>
+            
+          </div>
+        </td>
+      </tr>
+      
+      
+      
+      
+    </tbody>
+  </table>
+  
+    </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*CSS Cabeçalho*/
+
+header {
+    background: #02736b;
+    color: #fff;
+    padding: 2px;
+    
+    
+}
+header h2{
+    color: #f0f0f0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+header nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+
+/*CSS Main*/
+
+main{
+    text-align: center;
+}
+main h1{
+    margin: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .alunos {
+    display: none; /* Oculta a lista de alunos por padrão */
+  }
+  main button{
+    background: #02736b;
+    color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    padding:5px;
+    transition: 0.5s;
+    border: 1px solid #02736b ;
+  }
+  main button:hover{
+    background: #fff;
+    color: #02736b;
+    cursor: pointer;
+
+  }
+
+
+  /* Estilo da lista de alunos */
+  .alunos {
+    display: none; /* Oculta a lista de alunos por padrão */
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  .alunos h3 {
+    margin-top: 0;
+  }
+
+  .alunos ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .alunos li {
+    margin-bottom: 5px;
+    
+  }
+
+  .alunos label {
+    margin-left: 5px;
+    
+  }
+  td p{
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+ 
+  
