@@ -259,11 +259,16 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 > - `feature`: uma nova funcionalidade precisa ser introduzida
 
 ## Modelagem do processo de negócio
+A modelagem "As Is" e "To Be" são complementares e essenciais para uma análise completa de processos. A modelagem "As Is" fornece a base necessária para entender a situação atual e identificar áreas de melhoria, enquanto a modelagem "To Be" oferece uma visão clara e estruturada do futuro desejado, guiando a organização em direção às mudanças necessárias.
+
+Em resumo, a combinação de ambos os tipos de modelagem permite uma abordagem estruturada para a melhoria contínua dos processos, ajudando as organizações a se adaptarem e prosperarem em um ambiente de negócios em constante mudança.
 ### AS IS 
 ![Capturar](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/1f4e4330-47f6-4b0f-a6bc-85940527702f)
 
 ### TO BE
 ![To Be](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127231260/435d479d-4b04-46e3-b2f6-57649fbfadf8)
+## Diagrama de Entidade-Relacionamento e Modelo relacional 
+O modelo relacional e o Diagrama de Entidade-Relacionamento são pilares essenciais no design e na gestão de bancos de dados. Ambos desempenham papéis vitais na organização e na representação estruturada dos dados, facilitando a compreensão, a manipulação e a integridade das informações. A integração desses conceitos permite uma modelagem eficiente, garantindo que os dados sejam armazenados de maneira lógica, coerente e facilmente acessível, atendendo às necessidades das organizações de forma precisa e eficaz.
 ### Diagrama de Entidade-Relacionamento
 ![Tiaw drawio](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/6a621cfa-625d-4b1d-8f4a-fd1fee713b70)
 
