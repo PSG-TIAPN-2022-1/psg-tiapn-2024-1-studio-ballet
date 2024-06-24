@@ -288,53 +288,196 @@ Para a implementação da solução, utilizamos uma variedade de ferramentas e t
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
+# Cenário 1: Registro de Usuário
+Objetivo: Verificar se o usuário pode registrar-se com sucesso na aplicação.
+Requisitos: O usuário deve preencher todos os campos obrigatórios corretamente (nome, cpf, senha, modalidade) e receber uma confirmação de registro bem-sucedido.
+Passos:
+1- Navegar para a página de registro.
+2- Preencher o formulário com informações válidas.
+3- Salvar o formulário.
+4- Verificar a mensagem de sucesso.
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+# Cenário 2: Login de Usuário
+Objetivo: Verificar se o usuário pode fazer login com credenciais corretas.
+Requisitos: O usuário deve ser redirecionado para a página inicial após o login bem-sucedido.
+Passos:
+1- Navegar para a página de login.
+2- Inserir nome e senha correta.
+3- Redirecionar para a pagina inicial 
+
+# Cenário 3: Financeiro
+•	Objetivo: Verificar situação de pagamento e alterar.
+•	Requisitos: O sistema deve mostrar os alunos cadastrados no banco de dados e o usuário deve poder alterar a situação do pagamento.
+•	Passos:
+1.	Navegar para a página Financeiro.
+2.	Alterar em situação pagamento.
+
+# Cenário 4: Turmas
+•	Objetivo: Verificar alunos de cada turma e adicionar nota.
+•	Requisitos: O sistema deve mostrar os alunos cadastrados no banco de dados e o usuário deve poder alterar a nota.
+•	Passos:
+1.	Navegar para a página Turmas.
+2.	Clicar no código da turma.
+3.	Alterar nota.
+4.	Salvar. 
+
+# Cenário 5: Aulas
+•	Objetivo: Verificar aulas criadas e adicionar musica.
+•	Requisitos: O sistema deve mostrar o nome do professor e da turma cadastrados no banco de dados e o usuário deve poder alterar a musica, excluir e adicionar um novo planejamento.
+•	Passos:
+1.	Navegar para a página Aulas.
+2.	Escrever uma musica.
+3.	Adicionar planejamento.
+4.	Editar. 
+5.	Excluir
+
+# Cenário 6: Presença
+•	Objetivo: Adicionar falta ao aluno.
+•	Requisitos: O sistema deve mostrar o nome do aluno cadastrado no banco de dados e o usuário deve poder adicionar falta ao aluno.
+•	Passos:
+1.	Navegar para a página presença.
+2.	Ver alunos.
+3.	Checkbox nos alunos.
+4.	Salvar. 
+
+# Cenário 7: Informações aluno
+•	Objetivo: Visualizar a nota e a situação de pagamento do aluno.
+•	Requisitos: O sistema deve mostrar o nome, nota, CPF e situação de pagamento do aluno cadastrado no banco de dados.
+•	Passos:
+1.	Navegar para a página Informações alunos.
 
 ## Plano de Testes
+# Cenário 1: Registro de Usuário
+•	Objetivo: Verificar se o usuário pode registrar-se com sucesso na aplicação.
+•	Requisitos: O usuário deve preencher todos os campos obrigatórios corretamente (nome, CPF, senha, modalidade) e receber uma confirmação de registro bem-sucedido.
+•	Passos:
+1.	Navegar para a página de registro.
+2.	Preencher o formulário com informações válidas.
+3.	Submeter o formulário.
+4.	Verificar a mensagem de sucesso.
+•	Grupo de Usuários: Novos usuários.
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que suportam o registro de usuários, verificando se os dados são enviados e armazenados corretamente.
+# Cenário 2: Login de Usuário
+•	Objetivo: Verificar se o usuário pode fazer login com credenciais corretas.
+•	Requisitos: O usuário deve ser redirecionado para a página inicial após o login bem-sucedido.
+•	Passos:
+1.	Navegar para a página de login.
+2.	Inserir nome e senha correto.
+3.	Salvar o formulário.
+4.	Verificar o redirecionamento para a página inicial.
+•	Grupo de Usuários: Usuários registrados (testers internos com contas criadas previamente).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que suportam a autenticação de usuários, garantindo que as credenciais sejam verificadas corretamente.
+# Cenário 3: Financeiro
+•	Objetivo: Verificar situação de pagamento e alterar.
+•	Requisitos: O sistema deve mostrar os alunos cadastrados no banco de dados e o usuário deve poder alterar a situação do pagamento.
+•	Passos:
+1.	Navegar para a página Financeiro.
+2.	Alterar a situação de pagamento.
+•	Grupo de Usuários: Usuário de teste (logado como professor).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que fornecem os dados financeiros do aluno e permitem alterações na situação de pagamento.
+# Cenário 4: Turmas
+•	Objetivo: Verificar alunos de cada turma e adicionar nota.
+•	Requisitos: O sistema deve mostrar os alunos cadastrados no banco de dados e o usuário deve poder alterar a nota.
+•	Passos:
+1.	Navegar para a página Turmas.
+2.	Clicar no código da turma.
+3.	Alterar a nota.
+4.	Salvar.
+•	Grupo de Usuários: Usuário de teste (logado como professor).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que fornecem dados das turmas e permitem alterações nas notas dos alunos.
+# Cenário 5: Aulas
+•	Objetivo: Verificar aulas criadas e adicionar música.
+•	Requisitos: O sistema deve mostrar o nome do professor e da turma cadastrados no banco de dados e o usuário deve poder alterar a música, excluir e adicionar um novo planejamento.
+•	Passos:
+1.	Navegar para a página Aulas.
+2.	Escrever uma música.
+3.	Adicionar planejamento.
+4.	Editar.
+5.	Excluir.
+•	Grupo de Usuários: Usuário de teste (logado como professor).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que gerenciam aulas, professores e planejamentos.
+# Cenário 6: Presença
+•	Objetivo: Adicionar falta ao aluno.
+•	Requisitos: O sistema deve mostrar o nome do aluno cadastrado no banco de dados e o usuário deve poder adicionar falta ao aluno.
+•	Passos:
+1.	Navegar para a página Presença.
+2.	Ver alunos.
+3.	Marcar checkbox nos alunos faltantes.
+4.	Salvar.
+•	Grupo de Usuários: Usuário de teste (logado como professor).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que gerenciam a presença dos alunos.
+# Cenário 7: Informações do Aluno
+•	Objetivo: Visualizar a nota e a situação de pagamento do aluno.
+•	Requisitos: O sistema deve mostrar o nome, nota, CPF e situação de pagamento do aluno cadastrado no banco de dados.
+•	Passos:
+1.	Navegar para a página Informações do Aluno.
+•	Grupo de Usuários: Usuário de teste (logado como aluno).
+•	Ferramenta Utilizada:
+o	Swagger: Para testar os endpoints de API que fornecem as informações detalhadas dos alunos.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+## Ferramentas de Testes 
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+# Swagger:
+•	Descrição: Ferramenta para desenvolvimento e teste de APIs. Permite enviar requisições HTTP e visualizar respostas.
 
-## Ferramentas de Testes (Opcional)
+•	Imagem: 
+![image](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/8a814b25-0685-41a2-8014-4a78f4474258)
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+•	Uso: Utilizado para validar os endpoints de API utilizados nos cenários de teste. Swagger garante que as operações de backend funcionem conforme esperado, permitindo testar a criação, leitura, atualização e exclusão de dados através das APIs.
 
 ## Registros de Testes
+# Cenário 1: Registro de Usuário
+•	Resultado: O registro de usuário foi bem-sucedido para todos os usuários de teste. Todos os campos obrigatórios foram validados corretamente, e as mensagens de sucesso foram exibidas conforme esperado.
+•	Pontos Fortes: A validação de entrada nos campos de nome, CPF, senha e modalidade funcionou conforme o esperado, garantindo que apenas dados válidos fossem aceitos.
+•	Pontos Fracos Identificados: Ter que escolher modalidade na hora de cadastrar.
+•	Melhorias Futuras: Considerar a inclusão de validações adicionais, como verificação de formato de CPF e complexidade de senha, para aumentar a segurança e a robustez do sistema. Da ao usuário a possibilidade de cadastrar sem escolher modalidade.
 
-......  COLOQUE AQUI O SEU TEXTO ......
+# Cenário 2: Login de Usuário
+•	Resultado: O login foi realizado com sucesso para todos os usuários de teste. Após inserir credenciais corretas, os usuários foram redirecionados para a página inicial.
+•	Pontos Fortes: A autenticação funcionou corretamente, garantindo o acesso apenas a usuários registrados e autorizados.
+•	Pontos Fracos Identificados: Nenhum ponto fraco significativo foi identificado neste cenário.
+•	Melhorias Futuras: Trocar senha por código enviado ao e-mail.
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+# Cenário 3: Financeiro
+•	Resultado: Os usuários conseguiram visualizar e alterar a situação de pagamento dos alunos. As operações de alteração foram concluídas com sucesso.
+•	Pontos Fortes: As funcionalidades relacionadas ao financeiro estão operando conforme esperado, permitindo um controle dos pagamentos dos alunos.
+•	Pontos Fracos Identificados: Nenhum ponto fraco significativo foi identificado neste cenário.
+•	Melhorias Futuras: Incluir que o aluno consiga pagar pelo site.
+
+# Cenário 4: Turmas
+•	Resultado: As notas dos alunos puderam ser alteradas com sucesso pelos usuários. Todas as operações de modificação foram concluídas sem problemas.
+•	Pontos Fortes: A funcionalidade de gestão de notas está operando de forma eficiente, permitindo aos professores atualizar informações dos alunos.
+•	Pontos Fracos Identificados: Nenhum ponto fraco significativo foi identificado neste cenário.
+•	Melhorias Futuras: Implementar um sistema de histórico de notas para acompanhar alterações ao longo do tempo.
+
+# Cenário 5: Aulas
+•	Resultado: Os usuários conseguiram criar, editar e excluir aulas conforme necessário. As operações de gerenciamento de aulas foram bem-sucedidas.
+•	Pontos Fortes: A funcionalidade de gestão de aulas está completa, permitindo aos professores manter um planejamento didático eficiente.
+•	Pontos Fracos Identificados: Ao adicionar planejamento, precisa recarregar para editar e excluir.
+•	Melhorias Futuras: Incluir data da aula.
+
+# Cenário 6: Presença
+•	Resultado: Os usuários conseguiram marcar a presença dos alunos sem dificuldades. Todas as alterações foram salvas conforme esperado.
+•	Pontos Fortes: A funcionalidade de controle de presença está operando de maneira eficaz, auxiliando no monitoramento da participação dos alunos.
+•	Pontos Fracos Identificados: Nenhum ponto fraco significativo foi identificado neste cenário.
+•	Melhorias Futuras: Implementar um método de tirar a falta.
+
+# Cenário 7: Informações do Aluno
+•	Resultado: As informações detalhadas dos alunos puderam ser visualizadas pelos usuários autorizados. Todos os dados foram exibidos corretamente.
+•	Pontos Fortes: A funcionalidade de exibição de informações do aluno está funcionando conforme esperado, fornecendo dados precisos e atualizados.
+•	Pontos Fracos Identificados: Nenhum ponto fraco significativo foi identificado neste cenário.
+•	Melhorias Futuras: Implementar a frequência dos alunos.
 
 
 # Referências
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
 > **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+> - [Camunda](https://modeler.cloud.camunda.io/login)
+> - [Draw.io](https://www.drawio.com/)
+> - [W3Schools](https://www.w3schools.com/)
