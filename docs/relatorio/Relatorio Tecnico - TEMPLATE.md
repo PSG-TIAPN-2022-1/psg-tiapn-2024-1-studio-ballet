@@ -38,7 +38,6 @@ Sistemas de Informação
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
-- [**############## SPRINT 1 ACABA AQUI #############**](#-sprint-1-acaba-aqui-)
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
@@ -259,7 +258,6 @@ https://1drv.ms/b/c/3731a6fa54e99ab6/EfEM54IMNitBm8TOYN7-31wBHdU2Ghh2ENwxaIdXjQ5
 > - `enhancement`: uma funcionalidade precisa ser melhorada
 > - `feature`: uma nova funcionalidade precisa ser introduzida
 
-# **############## SPRINT 1 ACABA AQUI #############**
 ## Modelagem do processo de negócio
 ### AS IS 
 ![Capturar](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/1f4e4330-47f6-4b0f-a6bc-85940527702f)
@@ -279,18 +277,6 @@ O projeto teve como solução para a demanda solicitada pelo Studio Jessica Oliv
 
 Para a implementação da solução, utilizamos uma variedade de ferramentas e tecnologias. As principais ferramentas empregadas foram Visual Studio Code, Visual Studio, GitHub e SQL Server. No que diz respeito às linguagens de programação, a API foi desenvolvida em C#, enquanto o front-end foi criado utilizando HTML, CSS e JavaScript. Cada uma dessas tecnologias desempenhou um papel crucial na construção de uma aplicação robusta e eficiente, permitindo um desenvolvimento ágil e colaborativo através do GitHub, e garantindo a persistência de dados com o SQL Server.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
 
 ## Arquitetura da solução
 ![Navegador (4)](https://github.com/PSG-TIAPN-2022-1/psg-tiapn-2024-1-studio-ballet/assets/127527852/2fd28c4d-9886-483f-bfbf-6bb1be7d6147)
