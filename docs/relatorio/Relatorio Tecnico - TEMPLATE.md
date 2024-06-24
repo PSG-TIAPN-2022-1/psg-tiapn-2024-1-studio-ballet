@@ -171,7 +171,6 @@ Página de Administração Financeira:
 Objetivo: Auxiliar na gestão financeira do estúdio.
 Funcionalidades:
 Controle de Pagamentos: Registrar mensalidades e pagamentos.
-Relatórios Financeiros: Visualizar receitas e despesas.
 Requisitos Funcionais: Garantir precisão nos registros financeiros.
 
 Essas interfaces foram elaboradas considerando os requisitos funcionais (como inscrições, calendário de aulas e controle financeiro), os requisitos não funcionais (como usabilidade, desempenho e segurança) e as histórias de usuário abordadas nas Especificações do Projeto. A escolha das ferramentas (CSS, HTML, Canva, Trello, Figma e Visual Studio Code) deve contribuir para a eficácia e eficiência da solução.
